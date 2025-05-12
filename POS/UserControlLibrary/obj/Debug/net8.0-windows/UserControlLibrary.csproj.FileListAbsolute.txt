@@ -1,0 +1,16 @@
+C:\Users\Lenovo\Documents\3th_COURSE\04_Windows\UserControlLibrary\bin\Debug\net8.0-windows\UserControlLibrary.deps.json
+C:\Users\Lenovo\Documents\3th_COURSE\04_Windows\UserControlLibrary\bin\Debug\net8.0-windows\UserControlLibrary.dll
+C:\Users\Lenovo\Documents\3th_COURSE\04_Windows\UserControlLibrary\bin\Debug\net8.0-windows\UserControlLibrary.pdb
+C:\Users\Lenovo\Documents\3th_COURSE\04_Windows\UserControlLibrary\obj\Debug\net8.0-windows\UserControlLibrary.csproj.AssemblyReference.cache
+C:\Users\Lenovo\Documents\3th_COURSE\04_Windows\UserControlLibrary\obj\Debug\net8.0-windows\UserControlLibrary.OrderItem.resources
+C:\Users\Lenovo\Documents\3th_COURSE\04_Windows\UserControlLibrary\obj\Debug\net8.0-windows\UserControlLibrary.RadialButton.resources
+C:\Users\Lenovo\Documents\3th_COURSE\04_Windows\UserControlLibrary\obj\Debug\net8.0-windows\UserControlLibrary.UserControl1.resources
+C:\Users\Lenovo\Documents\3th_COURSE\04_Windows\UserControlLibrary\obj\Debug\net8.0-windows\UserControlLibrary.csproj.GenerateResource.cache
+C:\Users\Lenovo\Documents\3th_COURSE\04_Windows\UserControlLibrary\obj\Debug\net8.0-windows\UserControlLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lenovo\Documents\3th_COURSE\04_Windows\UserControlLibrary\obj\Debug\net8.0-windows\UserControlLibrary.AssemblyInfoInputs.cache
+C:\Users\Lenovo\Documents\3th_COURSE\04_Windows\UserControlLibrary\obj\Debug\net8.0-windows\UserControlLibrary.AssemblyInfo.cs
+C:\Users\Lenovo\Documents\3th_COURSE\04_Windows\UserControlLibrary\obj\Debug\net8.0-windows\UserControlLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\Documents\3th_COURSE\04_Windows\UserControlLibrary\obj\Debug\net8.0-windows\UserControlLibrary.dll
+C:\Users\Lenovo\Documents\3th_COURSE\04_Windows\UserControlLibrary\obj\Debug\net8.0-windows\refint\UserControlLibrary.dll
+C:\Users\Lenovo\Documents\3th_COURSE\04_Windows\UserControlLibrary\obj\Debug\net8.0-windows\UserControlLibrary.pdb
+C:\Users\Lenovo\Documents\3th_COURSE\04_Windows\UserControlLibrary\obj\Debug\net8.0-windows\ref\UserControlLibrary.dll

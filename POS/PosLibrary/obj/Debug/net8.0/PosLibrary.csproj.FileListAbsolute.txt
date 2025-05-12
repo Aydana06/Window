@@ -1,0 +1,14 @@
+C:\Users\Lenovo\Documents\3th_COURSE\04_Windows\PosLibrary\obj\Debug\net8.0\PosLibrary.csproj.AssemblyReference.cache
+C:\Users\Lenovo\Documents\3th_COURSE\04_Windows\PosLibrary\obj\Debug\net8.0\PosLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lenovo\Documents\3th_COURSE\04_Windows\PosLibrary\obj\Debug\net8.0\PosLibrary.AssemblyInfoInputs.cache
+C:\Users\Lenovo\Documents\3th_COURSE\04_Windows\PosLibrary\obj\Debug\net8.0\PosLibrary.AssemblyInfo.cs
+C:\Users\Lenovo\Documents\3th_COURSE\04_Windows\PosLibrary\obj\Debug\net8.0\PosLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\Documents\3th_COURSE\04_Windows\PosLibrary\bin\Debug\net8.0\PosLibrary.deps.json
+C:\Users\Lenovo\Documents\3th_COURSE\04_Windows\PosLibrary\bin\Debug\net8.0\PosLibrary.runtimeconfig.json
+C:\Users\Lenovo\Documents\3th_COURSE\04_Windows\PosLibrary\bin\Debug\net8.0\PosLibrary.dll
+C:\Users\Lenovo\Documents\3th_COURSE\04_Windows\PosLibrary\bin\Debug\net8.0\PosLibrary.pdb
+C:\Users\Lenovo\Documents\3th_COURSE\04_Windows\PosLibrary\obj\Debug\net8.0\PosLibrary.dll
+C:\Users\Lenovo\Documents\3th_COURSE\04_Windows\PosLibrary\obj\Debug\net8.0\refint\PosLibrary.dll
+C:\Users\Lenovo\Documents\3th_COURSE\04_Windows\PosLibrary\obj\Debug\net8.0\PosLibrary.pdb
+C:\Users\Lenovo\Documents\3th_COURSE\04_Windows\PosLibrary\obj\Debug\net8.0\PosLibrary.genruntimeconfig.cache
+C:\Users\Lenovo\Documents\3th_COURSE\04_Windows\PosLibrary\obj\Debug\net8.0\ref\PosLibrary.dll
