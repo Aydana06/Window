@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace PosLibrary.Model
 {
-    public class User
+    class OrderItem
     {
         public int Id { get; set; }
-        public string Username { get; set; }
-        public string Password { get; set; }
-        public string Role { get; set; }
+        public int OrderId { get; set; }
+        public int ProductId { get; set; }
+        public int Quantity { get; set; }
 
     }
 }

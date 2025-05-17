@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Lenovo\\Documents\\Windows_Aydana\\POS\\PosLibrary\\PosLibrary.csproj": {}
+    "C:\\Users\\Lenovo\\Documents\\Window\\POS\\PosLibrary\\PosLibrary.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Lenovo\\Documents\\Windows_Aydana\\POS\\PosLibrary\\PosLibrary.csproj": {
+    "C:\\Users\\Lenovo\\Documents\\Window\\POS\\PosLibrary\\PosLibrary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Lenovo\\Documents\\Windows_Aydana\\POS\\PosLibrary\\PosLibrary.csproj",
+        "projectUniqueName": "C:\\Users\\Lenovo\\Documents\\Window\\POS\\PosLibrary\\PosLibrary.csproj",
         "projectName": "PosLibrary",
-        "projectPath": "C:\\Users\\Lenovo\\Documents\\Windows_Aydana\\POS\\PosLibrary\\PosLibrary.csproj",
+        "projectPath": "C:\\Users\\Lenovo\\Documents\\Window\\POS\\PosLibrary\\PosLibrary.csproj",
         "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Lenovo\\Documents\\Windows_Aydana\\POS\\PosLibrary\\obj\\",
+        "outputPath": "C:\\Users\\Lenovo\\Documents\\Window\\POS\\PosLibrary\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

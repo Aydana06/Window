@@ -568,6 +568,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
+          "PosLibrary": "1.0.0",
           "microsoft.data.sqlite.core": "9.0.3"
         },
         "compile": {
@@ -1351,11 +1352,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Lenovo\\Documents\\Windows_Aydana\\POS\\POS_UI_Form\\POS_UI_Form.csproj",
+      "projectUniqueName": "C:\\Users\\Lenovo\\Documents\\Window\\POS\\POS_UI_Form\\POS_UI_Form.csproj",
       "projectName": "POS_UI_Form",
-      "projectPath": "C:\\Users\\Lenovo\\Documents\\Windows_Aydana\\POS\\POS_UI_Form\\POS_UI_Form.csproj",
+      "projectPath": "C:\\Users\\Lenovo\\Documents\\Window\\POS\\POS_UI_Form\\POS_UI_Form.csproj",
       "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Lenovo\\Documents\\Windows_Aydana\\POS\\POS_UI_Form\\obj\\",
+      "outputPath": "C:\\Users\\Lenovo\\Documents\\Window\\POS\\POS_UI_Form\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -1377,11 +1378,11 @@
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
           "projectReferences": {
-            "C:\\Users\\Lenovo\\Documents\\Windows_Aydana\\POS\\PosLibrary\\PosLibrary.csproj": {
-              "projectPath": "C:\\Users\\Lenovo\\Documents\\Windows_Aydana\\POS\\PosLibrary\\PosLibrary.csproj"
+            "C:\\Users\\Lenovo\\Documents\\Window\\POS\\PosLibrary\\PosLibrary.csproj": {
+              "projectPath": "C:\\Users\\Lenovo\\Documents\\Window\\POS\\PosLibrary\\PosLibrary.csproj"
             },
-            "C:\\Users\\Lenovo\\Documents\\Windows_Aydana\\POS\\UserControlLibrary\\UserControlLibrary.csproj": {
-              "projectPath": "C:\\Users\\Lenovo\\Documents\\Windows_Aydana\\POS\\UserControlLibrary\\UserControlLibrary.csproj"
+            "C:\\Users\\Lenovo\\Documents\\Window\\POS\\UserControlLibrary\\UserControlLibrary.csproj": {
+              "projectPath": "C:\\Users\\Lenovo\\Documents\\Window\\POS\\UserControlLibrary\\UserControlLibrary.csproj"
             }
           }
         }

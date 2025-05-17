@@ -41,20 +41,15 @@ namespace POS_UI_Form
 
             if (dataGridView1.Columns.Contains("CategoryId"))
             {
-                dataGridView1.Columns["CategoryId"].Visible = false;
+                dataGridView1.Columns["CategoryId"].Visible = true;
             }
 
         }
         private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+        {}
 
         private void CategoryForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
+        {}
         private void btnCategoryAdd_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(txtCategoryName.Text))
@@ -135,9 +130,7 @@ namespace POS_UI_Form
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
+        {}
 
         private void dataGridViewCategories_SelectionChanged(object sender, EventArgs e)
         {

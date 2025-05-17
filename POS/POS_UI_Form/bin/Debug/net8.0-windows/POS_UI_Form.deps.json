@@ -416,6 +416,7 @@
       },
       "UserControlLibrary/1.0.0": {
         "dependencies": {
+          "PosLibrary": "1.0.0",
           "Microsoft.Data.Sqlite.Core": "9.0.3"
         },
         "runtime": {

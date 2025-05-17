@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PosLibrary.Model;
 
 namespace UserControlLibrary
 {
@@ -52,9 +53,7 @@ namespace UserControlLibrary
         }
 
         private void OrderItem_Load(object sender, EventArgs e)
-        {
-
-        }
+        {}
 
         private void UpdateAmount()
         {
@@ -74,32 +73,21 @@ namespace UserControlLibrary
                 Quantity--;
                 QuantityChanged?.Invoke(this, EventArgs.Empty);
             }
-
         }
 
         private void lblQty_Click(object sender, EventArgs e)
-        {
-
-        }
+        {  }
 
         private void lblAmount_Click(object sender, EventArgs e)
-        {
-
-        }
+        { }
 
         private void lblPrice_Click(object sender, EventArgs e)
-        {
-
-        }
+        { }
 
         private void lblItemName_Click(object sender, EventArgs e)
-        {
-
-        }
+        { }
 
         private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
+        {}
     }
 }

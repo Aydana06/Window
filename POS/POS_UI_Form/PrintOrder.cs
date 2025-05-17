@@ -53,7 +53,7 @@ namespace PosLibrary
             try
             {
                 Image logo = Image.FromFile("logo.png");
-                graphics.DrawImage(logo, x, y, 150, 150);
+                graphics.DrawImage(logo, 20, y, 200, 150);
                 y += 110;
             }
             catch

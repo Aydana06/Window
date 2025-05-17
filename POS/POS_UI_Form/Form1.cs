@@ -36,6 +36,7 @@ namespace POS_UI_Form
             {
                 orders.Add(new Order
                 {
+                   
                     ProductName = orderItem.ItemName,
                     Price = orderItem.Price,
                     Quantity = orderItem.Quantity,
@@ -51,7 +52,6 @@ namespace POS_UI_Form
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
         { }
 
-        //Нийт дүнийг тооцоолох
         //Төлбөр төлөх 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -211,6 +211,7 @@ namespace POS_UI_Form
                                 Left = 10,
                                 SizeMode = PictureBoxSizeMode.Zoom
                             };
+                            
 
                             if (!string.IsNullOrEmpty(imagePath) && File.Exists(imagePath))
                             {
@@ -316,7 +317,7 @@ namespace POS_UI_Form
                                 orderItem.QuantityChanged += (sender, args) => UpdateTotalAmount();
 
                                 flowLayoutPanel2.Controls.Add(orderItem);
-                                flowLayoutPanel2.Controls.SetChildIndex(orderItem, 0); // Шинэ хамгийн дээр гарна
+                                flowLayoutPanel2.Controls.SetChildIndex(orderItem, 0);
                                 orders.Add(new Order
                                 {
                                     ProductName = name,
@@ -340,6 +341,9 @@ namespace POS_UI_Form
 
         private void productBtn_Click_1(object sender, EventArgs e)
         {
+            Products productForm = new Products();
+            productForm.ShowDialog();
+
         }
 
         //SearchBtn дарахад хийгдэх үйлдэл
@@ -527,14 +531,10 @@ namespace POS_UI_Form
         }
 
         private void button8_Click(object sender, EventArgs e)
-        {
-
-        }
+        {}
 
         private void lblTotalPrice_Click(object sender, EventArgs e)
-        {
-
-        }
+        { }
 
         private void categoryBtn_Click(object sender, EventArgs e)
         {
@@ -544,7 +544,13 @@ namespace POS_UI_Form
 
         private void button2_Click(object sender, EventArgs e)
         {
-            flowLayoutPanel2.Controls.Clear();
+            var result = MessageBox.Show("Та бүх барааг цэвэрлэхдээ итгэлтэй байна уу?",
+                             "Баталгаажуулалт", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                flowLayoutPanel2.Controls.Clear();
+                lblTotalPrice.Text = "";
+            }
         }
     }
 }
