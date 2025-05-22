@@ -1,0 +1,85 @@
+2025-05-21T12:44:20.4228965+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Version: 1.7.0+927c3c21202a7b4cebddefb3a2337c683f4e5138
+2025-05-21T12:44:20.4413302+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Logging mode: asynchronous
+2025-05-21T12:44:20.4438272+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Logging level: Information
+2025-05-21T12:44:20.4438453+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION CreateBuilderAsync entry time: 12:44:20.381
+2025-05-21T12:44:20.4468087+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION PID: 18852
+2025-05-21T12:44:20.4470796+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Runtime information: win-x64 - .NET 8.0.14
+2025-05-21T12:44:20.4471022+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Runtime location: C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.14\System.Private.CoreLib.dll
+2025-05-21T12:44:20.4471217+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION IsDynamicCodeSupported: True
+2025-05-21T12:44:20.4472289+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Test module: C:\Users\Lenovo\Documents\3th_COURSE\04_Windows\PosTest\bin\Debug\net8.0\PosTest.dll
+2025-05-21T12:44:20.4476699+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Command line arguments: '--server --diagnostic --diagnostic-verbosity Information --diagnostic-output-directory C:\Users\Lenovo\Documents\3th_COURSE\04_Windows\PosTest\bin\Debug\net8.0\Log --results-directory C:\Users\Lenovo\Documents\3th_COURSE\04_Windows\PosTest\bin\Debug\net8.0\fine-code-coverage\coverage-tool-output --client-port 52254'
+2025-05-21T12:44:20.4499536+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION TESTINGPLATFORM_DEFAULT_HANG_TIMEOUT: ''
+2025-05-21T12:44:20.4925254+00:00 Microsoft.Testing.Platform.Hosts.TestHostBuilder INFORMATION Setting RegisterEnvironmentVariablesConfigurationSource: 'True'
+2025-05-21T12:44:20.5154878+00:00 Microsoft.Testing.Platform.Hosts.TestHostBuilder INFORMATION Setting PlatformExitProcessOnUnhandledException: 'False', config file: False environment variable: 
+2025-05-21T12:44:20.8263903+00:00 Microsoft.Testing.Platform.Requests.TestHostTestFrameworkInvoker INFORMATION Test framework UID: 'MSTestExtension' Version: '3.9.0' DisplayName: 'MSTest' Description: 'MSTest Framework for Microsoft Testing Platform'
+2025-05-21T12:44:20.8409350+00:00 Microsoft.Testing.Extensions.VSTestBridge.ObjectModel.MessageLoggerAdapter WARNING Runsettings datacollectors are not supported by Microsoft.Testing.Platform and will be ignored
+2025-05-21T12:44:20.8420139+00:00 Microsoft.Testing.Extensions.VSTestBridge.ObjectModel.MessageLoggerAdapter WARNING Runsettings attribute 'TestAdaptersPaths' is not supported by Microsoft.Testing.Platform and will be ignored
+2025-05-21T12:44:20.8908173+00:00 mstest-trace INFORMATION MSTestExecutor.RunTests: Running tests from sources.
+2025-05-21T12:44:20.8988763+00:00 mstest-trace INFORMATION CollectSourceInformation value found : False 
+2025-05-21T12:44:20.9546737+00:00 mstest-trace INFORMATION MSTestDiscoverer: Found 7 tests from source C:\Users\Lenovo\Documents\3th_COURSE\04_Windows\PosTest\bin\Debug\net8.0\PosTest.dll
+2025-05-21T12:44:20.9887892+00:00 mstest-trace INFORMATION Created unit-test runner C:\Users\Lenovo\Documents\3th_COURSE\04_Windows\PosTest\bin\Debug\net8.0\PosTest.dll
+2025-05-21T12:44:20.9972213+00:00 Microsoft.Testing.Extensions.VSTestBridge.ObjectModel.MessageLoggerAdapter INFORMATION Test Parallelization enabled for C:\Users\Lenovo\Documents\3th_COURSE\04_Windows\PosTest\bin\Debug\net8.0\PosTest.dll (Workers: 14, Scope: MethodLevel)
+2025-05-21T12:44:21.0148403+00:00 mstest-trace INFORMATION Executing test AddCategory_EmptyName_ThrowsException
+2025-05-21T12:44:21.0148981+00:00 mstest-trace INFORMATION Executing test DeleteCategory_ValidId_CallsRepoDelete
+2025-05-21T12:44:21.0150913+00:00 mstest-trace INFORMATION Executing test GetCategories_ReturnsFromRepo
+2025-05-21T12:44:21.0151368+00:00 mstest-trace INFORMATION Executing test AddCategory_ValidName_CallsRepoAdd
+2025-05-21T12:44:21.0151679+00:00 mstest-trace INFORMATION Executing test UpdateCategory_ValidInput_CallsRepoUpdate
+2025-05-21T12:44:21.0151467+00:00 mstest-trace INFORMATION Executing test UpdateCategory_EmptyName_ThrowsException
+2025-05-21T12:44:21.0151514+00:00 mstest-trace INFORMATION Executing test GetCategoryById_ReturnsCorrectCategory
+2025-05-21T12:44:21.1028400+00:00 mstest-trace INFORMATION Executed test DeleteCategory_ValidId_CallsRepoDelete
+2025-05-21T12:44:21.1028401+00:00 mstest-trace INFORMATION Executed test UpdateCategory_ValidInput_CallsRepoUpdate
+2025-05-21T12:44:21.1028401+00:00 mstest-trace INFORMATION Executed test GetCategories_ReturnsFromRepo
+2025-05-21T12:44:21.1028401+00:00 mstest-trace INFORMATION Executed test AddCategory_ValidName_CallsRepoAdd
+2025-05-21T12:44:21.1028401+00:00 mstest-trace INFORMATION Executed test UpdateCategory_EmptyName_ThrowsException
+2025-05-21T12:44:21.1029100+00:00 mstest-trace INFORMATION Executed test GetCategoryById_ReturnsCorrectCategory
+2025-05-21T12:44:21.1029146+00:00 mstest-trace INFORMATION Executed test AddCategory_EmptyName_ThrowsException
+2025-05-21T12:44:21.1065632+00:00 mstest-trace INFORMATION MSTestExecutor:Test PosTest.PosTests.CategoryServiceTests.DeleteCategory_ValidId_CallsRepoDelete failed. ErrorMessage:Initialization method PosTest.PosTests.CategoryServiceTests.Setup threw exception. System.ArgumentException: Constructor arguments cannot be passed for interface mocks.., ErrorStackTrace:   at Moq.Mock`1.CheckParameters() in /_/src/Moq/Mock`1.cs:line 223
+   at Moq.Mock`1..ctor(MockBehavior behavior, Object[] args) in /_/src/Moq/Mock`1.cs:line 191
+   at Moq.Mock`1..ctor(Object[] args) in /_/src/Moq/Mock`1.cs:line 143
+   at PosTest.PosTests.CategoryServiceTests.Setup() in C:\Users\Lenovo\Documents\3th_COURSE\04_Windows\PosTest\Test1.cs:line 27
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+.
+2025-05-21T12:44:21.1065825+00:00 mstest-trace INFORMATION MSTestExecutor:Test PosTest.PosTests.CategoryServiceTests.GetCategoryById_ReturnsCorrectCategory failed. ErrorMessage:Initialization method PosTest.PosTests.CategoryServiceTests.Setup threw exception. System.ArgumentException: Constructor arguments cannot be passed for interface mocks.., ErrorStackTrace:   at Moq.Mock`1.CheckParameters() in /_/src/Moq/Mock`1.cs:line 223
+   at Moq.Mock`1..ctor(MockBehavior behavior, Object[] args) in /_/src/Moq/Mock`1.cs:line 191
+   at Moq.Mock`1..ctor(Object[] args) in /_/src/Moq/Mock`1.cs:line 143
+   at PosTest.PosTests.CategoryServiceTests.Setup() in C:\Users\Lenovo\Documents\3th_COURSE\04_Windows\PosTest\Test1.cs:line 27
+   at InvokeStub_CategoryServiceTests.Setup(Object, Object, IntPtr*)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+.
+2025-05-21T12:44:21.1065632+00:00 mstest-trace INFORMATION MSTestExecutor:Test PosTest.PosTests.CategoryServiceTests.UpdateCategory_ValidInput_CallsRepoUpdate failed. ErrorMessage:Initialization method PosTest.PosTests.CategoryServiceTests.Setup threw exception. System.ArgumentException: Constructor arguments cannot be passed for interface mocks.., ErrorStackTrace:   at Moq.Mock`1.CheckParameters() in /_/src/Moq/Mock`1.cs:line 223
+   at Moq.Mock`1..ctor(MockBehavior behavior, Object[] args) in /_/src/Moq/Mock`1.cs:line 191
+   at Moq.Mock`1..ctor(Object[] args) in /_/src/Moq/Mock`1.cs:line 143
+   at PosTest.PosTests.CategoryServiceTests.Setup() in C:\Users\Lenovo\Documents\3th_COURSE\04_Windows\PosTest\Test1.cs:line 27
+   at InvokeStub_CategoryServiceTests.Setup(Object, Object, IntPtr*)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+.
+2025-05-21T12:44:21.1065923+00:00 mstest-trace INFORMATION MSTestExecutor:Test PosTest.PosTests.CategoryServiceTests.AddCategory_ValidName_CallsRepoAdd failed. ErrorMessage:Initialization method PosTest.PosTests.CategoryServiceTests.Setup threw exception. System.ArgumentException: Constructor arguments cannot be passed for interface mocks.., ErrorStackTrace:   at Moq.Mock`1.CheckParameters() in /_/src/Moq/Mock`1.cs:line 223
+   at Moq.Mock`1..ctor(MockBehavior behavior, Object[] args) in /_/src/Moq/Mock`1.cs:line 191
+   at Moq.Mock`1..ctor(Object[] args) in /_/src/Moq/Mock`1.cs:line 143
+   at PosTest.PosTests.CategoryServiceTests.Setup() in C:\Users\Lenovo\Documents\3th_COURSE\04_Windows\PosTest\Test1.cs:line 27
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+.
+2025-05-21T12:44:21.1065977+00:00 mstest-trace INFORMATION MSTestExecutor:Test PosTest.PosTests.CategoryServiceTests.AddCategory_EmptyName_ThrowsException failed. ErrorMessage:Initialization method PosTest.PosTests.CategoryServiceTests.Setup threw exception. System.ArgumentException: Constructor arguments cannot be passed for interface mocks.., ErrorStackTrace:   at Moq.Mock`1.CheckParameters() in /_/src/Moq/Mock`1.cs:line 223
+   at Moq.Mock`1..ctor(MockBehavior behavior, Object[] args) in /_/src/Moq/Mock`1.cs:line 191
+   at Moq.Mock`1..ctor(Object[] args) in /_/src/Moq/Mock`1.cs:line 143
+   at PosTest.PosTests.CategoryServiceTests.Setup() in C:\Users\Lenovo\Documents\3th_COURSE\04_Windows\PosTest\Test1.cs:line 27
+   at InvokeStub_CategoryServiceTests.Setup(Object, Object, IntPtr*)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+.
+2025-05-21T12:44:21.1066261+00:00 mstest-trace INFORMATION MSTestExecutor:Test PosTest.PosTests.CategoryServiceTests.GetCategories_ReturnsFromRepo failed. ErrorMessage:Initialization method PosTest.PosTests.CategoryServiceTests.Setup threw exception. System.ArgumentException: Constructor arguments cannot be passed for interface mocks.., ErrorStackTrace:   at Moq.Mock`1.CheckParameters() in /_/src/Moq/Mock`1.cs:line 223
+   at Moq.Mock`1..ctor(MockBehavior behavior, Object[] args) in /_/src/Moq/Mock`1.cs:line 191
+   at Moq.Mock`1..ctor(Object[] args) in /_/src/Moq/Mock`1.cs:line 143
+   at PosTest.PosTests.CategoryServiceTests.Setup() in C:\Users\Lenovo\Documents\3th_COURSE\04_Windows\PosTest\Test1.cs:line 27
+   at InvokeStub_CategoryServiceTests.Setup(Object, Object, IntPtr*)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+.
+2025-05-21T12:44:21.1066295+00:00 mstest-trace INFORMATION MSTestExecutor:Test PosTest.PosTests.CategoryServiceTests.UpdateCategory_EmptyName_ThrowsException failed. ErrorMessage:Initialization method PosTest.PosTests.CategoryServiceTests.Setup threw exception. System.ArgumentException: Constructor arguments cannot be passed for interface mocks.., ErrorStackTrace:   at Moq.Mock`1.CheckParameters() in /_/src/Moq/Mock`1.cs:line 223
+   at Moq.Mock`1..ctor(MockBehavior behavior, Object[] args) in /_/src/Moq/Mock`1.cs:line 191
+   at Moq.Mock`1..ctor(Object[] args) in /_/src/Moq/Mock`1.cs:line 143
+   at PosTest.PosTests.CategoryServiceTests.Setup() in C:\Users\Lenovo\Documents\3th_COURSE\04_Windows\PosTest\Test1.cs:line 27
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+.
+2025-05-21T12:44:21.1111640+00:00 mstest-trace INFORMATION Executed tests belonging to source C:\Users\Lenovo\Documents\3th_COURSE\04_Windows\PosTest\bin\Debug\net8.0\PosTest.dll

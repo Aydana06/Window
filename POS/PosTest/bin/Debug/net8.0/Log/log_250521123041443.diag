@@ -1,0 +1,104 @@
+2025-05-21T12:30:41.4546385+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Version: 1.7.0+927c3c21202a7b4cebddefb3a2337c683f4e5138
+2025-05-21T12:30:41.4741914+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Logging mode: asynchronous
+2025-05-21T12:30:41.4761018+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Logging level: Information
+2025-05-21T12:30:41.4761106+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION CreateBuilderAsync entry time: 12:30:41.413
+2025-05-21T12:30:41.4794354+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION PID: 7616
+2025-05-21T12:30:41.4797853+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Runtime information: win-x64 - .NET 8.0.14
+2025-05-21T12:30:41.4798097+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Runtime location: C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.14\System.Private.CoreLib.dll
+2025-05-21T12:30:41.4798303+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION IsDynamicCodeSupported: True
+2025-05-21T12:30:41.4799597+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Test module: C:\Users\Lenovo\Documents\3th_COURSE\04_Windows\PosTest\bin\Debug\net8.0\PosTest.dll
+2025-05-21T12:30:41.4804477+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Command line arguments: '--server --diagnostic --diagnostic-verbosity Information --diagnostic-output-directory C:\Users\Lenovo\Documents\3th_COURSE\04_Windows\PosTest\bin\Debug\net8.0\Log --results-directory C:\Users\Lenovo\Documents\3th_COURSE\04_Windows\PosTest\bin\Debug\net8.0\fine-code-coverage\coverage-tool-output --client-port 52045'
+2025-05-21T12:30:41.4839593+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION TESTINGPLATFORM_DEFAULT_HANG_TIMEOUT: ''
+2025-05-21T12:30:41.5302425+00:00 Microsoft.Testing.Platform.Hosts.TestHostBuilder INFORMATION Setting RegisterEnvironmentVariablesConfigurationSource: 'True'
+2025-05-21T12:30:41.5532265+00:00 Microsoft.Testing.Platform.Hosts.TestHostBuilder INFORMATION Setting PlatformExitProcessOnUnhandledException: 'False', config file: False environment variable: 
+2025-05-21T12:30:41.8463281+00:00 Microsoft.Testing.Platform.Requests.TestHostTestFrameworkInvoker INFORMATION Test framework UID: 'MSTestExtension' Version: '3.9.0' DisplayName: 'MSTest' Description: 'MSTest Framework for Microsoft Testing Platform'
+2025-05-21T12:30:41.8603190+00:00 Microsoft.Testing.Extensions.VSTestBridge.ObjectModel.MessageLoggerAdapter WARNING Runsettings datacollectors are not supported by Microsoft.Testing.Platform and will be ignored
+2025-05-21T12:30:41.8614405+00:00 Microsoft.Testing.Extensions.VSTestBridge.ObjectModel.MessageLoggerAdapter WARNING Runsettings attribute 'TestAdaptersPaths' is not supported by Microsoft.Testing.Platform and will be ignored
+2025-05-21T12:30:41.8953467+00:00 mstest-trace INFORMATION MSTestExecutor.RunTests: Running tests from sources.
+2025-05-21T12:30:41.9022733+00:00 mstest-trace INFORMATION CollectSourceInformation value found : False 
+2025-05-21T12:30:41.9655559+00:00 mstest-trace INFORMATION MSTestDiscoverer: Found 7 tests from source C:\Users\Lenovo\Documents\3th_COURSE\04_Windows\PosTest\bin\Debug\net8.0\PosTest.dll
+2025-05-21T12:30:42.0107718+00:00 mstest-trace INFORMATION Created unit-test runner C:\Users\Lenovo\Documents\3th_COURSE\04_Windows\PosTest\bin\Debug\net8.0\PosTest.dll
+2025-05-21T12:30:42.0237561+00:00 Microsoft.Testing.Extensions.VSTestBridge.ObjectModel.MessageLoggerAdapter INFORMATION Test Parallelization enabled for C:\Users\Lenovo\Documents\3th_COURSE\04_Windows\PosTest\bin\Debug\net8.0\PosTest.dll (Workers: 14, Scope: MethodLevel)
+2025-05-21T12:30:42.0442321+00:00 mstest-trace INFORMATION Executing test DeleteCategory_ValidId_CallsRepoDelete
+2025-05-21T12:30:42.0442920+00:00 mstest-trace INFORMATION Executing test GetCategories_ReturnsFromRepo
+2025-05-21T12:30:42.0443385+00:00 mstest-trace INFORMATION Executing test GetCategoryById_ReturnsCorrectCategory
+2025-05-21T12:30:42.0443648+00:00 mstest-trace INFORMATION Executing test UpdateCategory_ValidInput_CallsRepoUpdate
+2025-05-21T12:30:42.0444025+00:00 mstest-trace INFORMATION Executing test AddCategory_EmptyName_ThrowsException
+2025-05-21T12:30:42.0444318+00:00 mstest-trace INFORMATION Executing test AddCategory_ValidName_CallsRepoAdd
+2025-05-21T12:30:42.0444514+00:00 mstest-trace INFORMATION Executing test UpdateCategory_EmptyName_ThrowsException
+2025-05-21T12:30:42.3085040+00:00 mstest-trace INFORMATION Executed test AddCategory_EmptyName_ThrowsException
+2025-05-21T12:30:42.3085040+00:00 mstest-trace INFORMATION Executed test UpdateCategory_EmptyName_ThrowsException
+2025-05-21T12:30:42.3552492+00:00 mstest-trace INFORMATION Executed test GetCategoryById_ReturnsCorrectCategory
+2025-05-21T12:30:42.3552412+00:00 mstest-trace INFORMATION Executed test GetCategories_ReturnsFromRepo
+2025-05-21T12:30:42.3554270+00:00 mstest-trace INFORMATION MSTestExecutor:Test PosTest.PosTests.CategoryServiceTests.GetCategories_ReturnsFromRepo failed. ErrorMessage:Test method PosTest.PosTests.CategoryServiceTests.GetCategories_ReturnsFromRepo threw exception: 
+System.NotSupportedException: Unsupported expression: repo => repo.GetAll()
+Non-overridable members (here: CategoryRepository.GetAll) may not be used in setup / verification expressions., ErrorStackTrace:   at Moq.Guard.IsOverridable(MethodInfo method, Expression expression) in /_/src/Moq/Guard.cs:line 99
+   at Moq.MethodExpectation..ctor(LambdaExpression expression, MethodInfo method, IReadOnlyList`1 arguments, Boolean exactGenericTypeArguments, Boolean skipMatcherInitialization, Boolean allowNonOverridable) in /_/src/Moq/MethodExpectation.cs:line 87
+   at Moq.ExpressionExtensions.<Split>g__Split|5_0(Expression e, Expression& r, MethodExpectation& p, Boolean assignment, Boolean allowNonOverridableLastProperty) in /_/src/Moq/ExpressionExtensions.cs:line 219
+   at Moq.ExpressionExtensions.Split(LambdaExpression expression, Boolean allowNonOverridableLastProperty) in /_/src/Moq/ExpressionExtensions.cs:line 149
+   at Moq.Mock.SetupRecursive[TSetup](Mock mock, LambdaExpression expression, Func`4 setupLast, Boolean allowNonOverridableLastProperty) in /_/src/Moq/Mock.cs:line 645
+   at Moq.Mock.Setup(Mock mock, LambdaExpression expression, Condition condition) in /_/src/Moq/Mock.cs:line 500
+   at Moq.Mock`1.Setup[TResult](Expression`1 expression) in /_/src/Moq/Mock`1.cs:line 452
+   at PosTest.PosTests.CategoryServiceTests.GetCategories_ReturnsFromRepo() in C:\Users\Lenovo\Documents\3th_COURSE\04_Windows\PosTest\Test1.cs:line 56
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+.
+2025-05-21T12:30:42.3554326+00:00 mstest-trace INFORMATION MSTestExecutor:Test PosTest.PosTests.CategoryServiceTests.GetCategoryById_ReturnsCorrectCategory failed. ErrorMessage:Test method PosTest.PosTests.CategoryServiceTests.GetCategoryById_ReturnsCorrectCategory threw exception: 
+System.NotSupportedException: Unsupported expression: repo => repo.GetById(5)
+Non-overridable members (here: CategoryRepository.GetById) may not be used in setup / verification expressions., ErrorStackTrace:   at Moq.Guard.IsOverridable(MethodInfo method, Expression expression) in /_/src/Moq/Guard.cs:line 99
+   at Moq.MethodExpectation..ctor(LambdaExpression expression, MethodInfo method, IReadOnlyList`1 arguments, Boolean exactGenericTypeArguments, Boolean skipMatcherInitialization, Boolean allowNonOverridable) in /_/src/Moq/MethodExpectation.cs:line 87
+   at Moq.ExpressionExtensions.<Split>g__Split|5_0(Expression e, Expression& r, MethodExpectation& p, Boolean assignment, Boolean allowNonOverridableLastProperty) in /_/src/Moq/ExpressionExtensions.cs:line 219
+   at Moq.ExpressionExtensions.Split(LambdaExpression expression, Boolean allowNonOverridableLastProperty) in /_/src/Moq/ExpressionExtensions.cs:line 149
+   at Moq.Mock.SetupRecursive[TSetup](Mock mock, LambdaExpression expression, Func`4 setupLast, Boolean allowNonOverridableLastProperty) in /_/src/Moq/Mock.cs:line 645
+   at Moq.Mock.Setup(Mock mock, LambdaExpression expression, Condition condition) in /_/src/Moq/Mock.cs:line 500
+   at Moq.Mock`1.Setup[TResult](Expression`1 expression) in /_/src/Moq/Mock`1.cs:line 452
+   at PosTest.PosTests.CategoryServiceTests.GetCategoryById_ReturnsCorrectCategory() in C:\Users\Lenovo\Documents\3th_COURSE\04_Windows\PosTest\Test1.cs:line 102
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+.
+2025-05-21T12:30:42.3554416+00:00 mstest-trace INFORMATION Executed test AddCategory_ValidName_CallsRepoAdd
+2025-05-21T12:30:42.3555062+00:00 mstest-trace INFORMATION MSTestExecutor:Test PosTest.PosTests.CategoryServiceTests.AddCategory_ValidName_CallsRepoAdd failed. ErrorMessage:Test method PosTest.PosTests.CategoryServiceTests.AddCategory_ValidName_CallsRepoAdd threw exception: 
+Microsoft.Data.Sqlite.SqliteException: SQLite Error 1: 'no such table: Categories'., ErrorStackTrace:   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteNonQuery()
+   at PosLibrary.Repo.CategoryRepository.Add(Category category) in C:\Users\Lenovo\Documents\3th_COURSE\04_Windows\PosLibrary\Repo\CategoryRepository.cs:line 68
+   at PosLibrary.Services.CategoryService.AddCategory(String categoryName) in C:\Users\Lenovo\Documents\3th_COURSE\04_Windows\PosLibrary\Services\CategoryService.cs:line 36
+   at PosTest.PosTests.CategoryServiceTests.AddCategory_ValidName_CallsRepoAdd() in C:\Users\Lenovo\Documents\3th_COURSE\04_Windows\PosTest\Test1.cs:line 38
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+.
+2025-05-21T12:30:42.3555925+00:00 mstest-trace INFORMATION Executed test DeleteCategory_ValidId_CallsRepoDelete
+2025-05-21T12:30:42.3556399+00:00 mstest-trace INFORMATION MSTestExecutor:Test PosTest.PosTests.CategoryServiceTests.DeleteCategory_ValidId_CallsRepoDelete failed. ErrorMessage:Test method PosTest.PosTests.CategoryServiceTests.DeleteCategory_ValidId_CallsRepoDelete threw exception: 
+Microsoft.Data.Sqlite.SqliteException: SQLite Error 1: 'no such table: Categories'., ErrorStackTrace:   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteNonQuery()
+   at PosLibrary.Repo.CategoryRepository.Delete(Int32 id) in C:\Users\Lenovo\Documents\3th_COURSE\04_Windows\PosLibrary\Repo\CategoryRepository.cs:line 90
+   at PosLibrary.Services.CategoryService.DeleteCategory(Int32 id) in C:\Users\Lenovo\Documents\3th_COURSE\04_Windows\PosLibrary\Services\CategoryService.cs:line 53
+   at PosTest.PosTests.CategoryServiceTests.DeleteCategory_ValidId_CallsRepoDelete() in C:\Users\Lenovo\Documents\3th_COURSE\04_Windows\PosTest\Test1.cs:line 91
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+.
+2025-05-21T12:30:42.3569900+00:00 mstest-trace INFORMATION Executed test UpdateCategory_ValidInput_CallsRepoUpdate
+2025-05-21T12:30:42.3570649+00:00 mstest-trace INFORMATION MSTestExecutor:Test PosTest.PosTests.CategoryServiceTests.UpdateCategory_ValidInput_CallsRepoUpdate failed. ErrorMessage:Test method PosTest.PosTests.CategoryServiceTests.UpdateCategory_ValidInput_CallsRepoUpdate threw exception: 
+Microsoft.Data.Sqlite.SqliteException: SQLite Error 1: 'no such table: Categories'., ErrorStackTrace:   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteNonQuery()
+   at PosLibrary.Repo.CategoryRepository.Update(Category category) in C:\Users\Lenovo\Documents\3th_COURSE\04_Windows\PosLibrary\Repo\CategoryRepository.cs:line 80
+   at PosLibrary.Services.CategoryService.UpdateCategory(Int32 id, String categoryName) in C:\Users\Lenovo\Documents\3th_COURSE\04_Windows\PosLibrary\Services\CategoryService.cs:line 48
+   at PosTest.PosTests.CategoryServiceTests.UpdateCategory_ValidInput_CallsRepoUpdate() in C:\Users\Lenovo\Documents\3th_COURSE\04_Windows\PosTest\Test1.cs:line 74
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+.
+2025-05-21T12:30:42.3574102+00:00 mstest-trace INFORMATION Executed tests belonging to source C:\Users\Lenovo\Documents\3th_COURSE\04_Windows\PosTest\bin\Debug\net8.0\PosTest.dll

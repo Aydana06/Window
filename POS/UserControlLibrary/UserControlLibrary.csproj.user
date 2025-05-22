@@ -4,6 +4,9 @@
     <Compile Update="OrderItem.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="OrderItemControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="RadialButton.cs">
       <SubType>UserControl</SubType>
     </Compile>

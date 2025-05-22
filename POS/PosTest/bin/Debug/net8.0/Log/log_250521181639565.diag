@@ -1,0 +1,155 @@
+2025-05-21T18:16:39.5772051+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Version: 1.7.0+927c3c21202a7b4cebddefb3a2337c683f4e5138
+2025-05-21T18:16:39.5957273+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Logging mode: asynchronous
+2025-05-21T18:16:39.5974952+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Logging level: Information
+2025-05-21T18:16:39.5975053+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION CreateBuilderAsync entry time: 18:16:39.526
+2025-05-21T18:16:39.6008081+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION PID: 2432
+2025-05-21T18:16:39.6012597+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Runtime information: win-x64 - .NET 8.0.14
+2025-05-21T18:16:39.6012862+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Runtime location: C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.14\System.Private.CoreLib.dll
+2025-05-21T18:16:39.6013031+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION IsDynamicCodeSupported: True
+2025-05-21T18:16:39.6013984+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Test module: C:\Users\Lenovo\Documents\3th_COURSE\04_Windows\PosTest\bin\Debug\net8.0\PosTest.dll
+2025-05-21T18:16:39.6017522+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Command line arguments: '--server --diagnostic --diagnostic-verbosity Information --diagnostic-output-directory C:\Users\Lenovo\Documents\3th_COURSE\04_Windows\PosTest\bin\Debug\net8.0\Log --results-directory C:\Users\Lenovo\Documents\3th_COURSE\04_Windows\PosTest\bin\Debug\net8.0\fine-code-coverage\coverage-tool-output --client-port 58287'
+2025-05-21T18:16:39.6041975+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION TESTINGPLATFORM_DEFAULT_HANG_TIMEOUT: ''
+2025-05-21T18:16:39.6421919+00:00 Microsoft.Testing.Platform.Hosts.TestHostBuilder INFORMATION Setting RegisterEnvironmentVariablesConfigurationSource: 'True'
+2025-05-21T18:16:39.6675503+00:00 Microsoft.Testing.Platform.Hosts.TestHostBuilder INFORMATION Setting PlatformExitProcessOnUnhandledException: 'False', config file: False environment variable: 
+2025-05-21T18:16:39.9454739+00:00 Microsoft.Testing.Platform.Requests.TestHostTestFrameworkInvoker INFORMATION Test framework UID: 'MSTestExtension' Version: '3.9.0' DisplayName: 'MSTest' Description: 'MSTest Framework for Microsoft Testing Platform'
+2025-05-21T18:16:39.9589659+00:00 Microsoft.Testing.Extensions.VSTestBridge.ObjectModel.MessageLoggerAdapter WARNING Runsettings datacollectors are not supported by Microsoft.Testing.Platform and will be ignored
+2025-05-21T18:16:39.9604116+00:00 Microsoft.Testing.Extensions.VSTestBridge.ObjectModel.MessageLoggerAdapter WARNING Runsettings attribute 'TestAdaptersPaths' is not supported by Microsoft.Testing.Platform and will be ignored
+2025-05-21T18:16:39.9953766+00:00 mstest-trace INFORMATION MSTestExecutor.RunTests: Running tests from sources.
+2025-05-21T18:16:40.0013406+00:00 mstest-trace INFORMATION CollectSourceInformation value found : False 
+2025-05-21T18:16:40.0536134+00:00 mstest-trace INFORMATION MSTestDiscoverer: Found 15 tests from source C:\Users\Lenovo\Documents\3th_COURSE\04_Windows\PosTest\bin\Debug\net8.0\PosTest.dll
+2025-05-21T18:16:40.0906328+00:00 mstest-trace INFORMATION Created unit-test runner C:\Users\Lenovo\Documents\3th_COURSE\04_Windows\PosTest\bin\Debug\net8.0\PosTest.dll
+2025-05-21T18:16:40.1043280+00:00 Microsoft.Testing.Extensions.VSTestBridge.ObjectModel.MessageLoggerAdapter INFORMATION Test Parallelization enabled for C:\Users\Lenovo\Documents\3th_COURSE\04_Windows\PosTest\bin\Debug\net8.0\PosTest.dll (Workers: 14, Scope: MethodLevel)
+2025-05-21T18:16:40.1201452+00:00 mstest-trace INFORMATION Executing test GetAllProducts_ShouldReturnAll
+2025-05-21T18:16:40.1201409+00:00 mstest-trace INFORMATION Executing test UpdateProduct_ShouldUpdateFields
+2025-05-21T18:16:40.1201526+00:00 mstest-trace INFORMATION Executing test GetByName_ShouldReturnNull_WhenNameNotFound
+2025-05-21T18:16:40.1201932+00:00 mstest-trace INFORMATION Executing test UpdateCategory_ValidInput_CallsRepoUpdate
+2025-05-21T18:16:40.1202191+00:00 mstest-trace INFORMATION Executing test AddCategory_EmptyName_ThrowsException
+2025-05-21T18:16:40.1202156+00:00 mstest-trace INFORMATION Executing test UpdateCategory_EmptyName_ThrowsException
+2025-05-21T18:16:40.1202880+00:00 mstest-trace INFORMATION Executing test getProductByCategory_ShouldReturnCorrectProducts
+2025-05-21T18:16:40.1202973+00:00 mstest-trace INFORMATION Executing test DeleteProduct_ShouldRemoveProduct
+2025-05-21T18:16:40.1203145+00:00 mstest-trace INFORMATION Executing test DeleteCategory_ValidId_CallsRepoDelete
+2025-05-21T18:16:40.1203319+00:00 mstest-trace INFORMATION Executing test AddCategory_ValidName_CallsRepoAdd
+2025-05-21T18:16:40.1203480+00:00 mstest-trace INFORMATION Executing test AddProduct_ShouldAddProductSuccesfully
+2025-05-21T18:16:40.1203714+00:00 mstest-trace INFORMATION Executing test AddProduct_WithDuplicateBarcode_ShouldThrowException
+2025-05-21T18:16:40.1205123+00:00 mstest-trace INFORMATION Executing test GetCategories_ReturnsFromRepo
+2025-05-21T18:16:40.1205214+00:00 mstest-trace INFORMATION Executing test GetByName_ShouldReturnProduct_WhenNameMatches
+2025-05-21T18:16:40.3830884+00:00 mstest-trace INFORMATION Executed test UpdateCategory_EmptyName_ThrowsException
+2025-05-21T18:16:40.3830908+00:00 mstest-trace INFORMATION Executed test AddCategory_EmptyName_ThrowsException
+2025-05-21T18:16:40.3928363+00:00 mstest-trace INFORMATION Executing test GetCategoryById_ReturnsCorrectCategory
+2025-05-21T18:16:40.3979156+00:00 mstest-trace INFORMATION Executed test GetCategoryById_ReturnsCorrectCategory
+2025-05-21T18:16:40.3981661+00:00 mstest-trace INFORMATION Executed test GetCategories_ReturnsFromRepo
+2025-05-21T18:16:40.4007069+00:00 mstest-trace INFORMATION Executed test DeleteCategory_ValidId_CallsRepoDelete
+2025-05-21T18:16:40.4168515+00:00 mstest-trace INFORMATION Executed test AddProduct_WithDuplicateBarcode_ShouldThrowException
+2025-05-21T18:16:40.4168516+00:00 mstest-trace INFORMATION Executed test getProductByCategory_ShouldReturnCorrectProducts
+2025-05-21T18:16:40.4169043+00:00 mstest-trace INFORMATION Executed test AddProduct_ShouldAddProductSuccesfully
+2025-05-21T18:16:40.4169466+00:00 mstest-trace INFORMATION Executed test GetAllProducts_ShouldReturnAll
+2025-05-21T18:16:40.4169449+00:00 mstest-trace INFORMATION Executed test UpdateProduct_ShouldUpdateFields
+2025-05-21T18:16:40.4169936+00:00 mstest-trace INFORMATION Executed test GetByName_ShouldReturnNull_WhenNameNotFound
+2025-05-21T18:16:40.4170199+00:00 mstest-trace INFORMATION MSTestExecutor:Test PosTest.ProductServiceTests.AddProduct_ShouldAddProductSuccesfully failed. ErrorMessage:Test method PosTest.ProductServiceTests.AddProduct_ShouldAddProductSuccesfully threw exception: 
+Microsoft.Data.Sqlite.SqliteException: SQLite Error 1: 'no such table: Products'., ErrorStackTrace:   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader()
+   at PosLibrary.Repo.ProductRepository.GetByBarcode(Int32 barcode) in C:\Users\Lenovo\Documents\3th_COURSE\04_Windows\PosLibrary\Repo\ProductRepository.cs:line 100
+   at PosLibrary.Services.ProductService.AddProduct(Product product) in C:\Users\Lenovo\Documents\3th_COURSE\04_Windows\PosLibrary\Services\ProductService.cs:line 43
+   at PosTest.ProductServiceTests.AddProduct_ShouldAddProductSuccesfully() in C:\Users\Lenovo\Documents\3th_COURSE\04_Windows\PosTest\ProductServiceTests.cs:line 67
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+.
+2025-05-21T18:16:40.4170301+00:00 mstest-trace INFORMATION MSTestExecutor:Test PosTest.ProductServiceTests.AddProduct_WithDuplicateBarcode_ShouldThrowException failed. ErrorMessage:Test method threw exception Microsoft.Data.Sqlite.SqliteException, but exception System.Exception was expected. Exception message: Microsoft.Data.Sqlite.SqliteException: SQLite Error 1: 'no such table: Products'., ErrorStackTrace:   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader()
+   at PosLibrary.Repo.ProductRepository.GetByBarcode(Int32 barcode) in C:\Users\Lenovo\Documents\3th_COURSE\04_Windows\PosLibrary\Repo\ProductRepository.cs:line 100
+   at PosLibrary.Services.ProductService.AddProduct(Product product) in C:\Users\Lenovo\Documents\3th_COURSE\04_Windows\PosLibrary\Services\ProductService.cs:line 43
+   at PosTest.ProductServiceTests.AddProduct_WithDuplicateBarcode_ShouldThrowException() in C:\Users\Lenovo\Documents\3th_COURSE\04_Windows\PosTest\ProductServiceTests.cs:line 80
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+.
+2025-05-21T18:16:40.4170110+00:00 mstest-trace INFORMATION MSTestExecutor:Test PosTest.ProductServiceTests.getProductByCategory_ShouldReturnCorrectProducts failed. ErrorMessage:Test method PosTest.ProductServiceTests.getProductByCategory_ShouldReturnCorrectProducts threw exception: 
+Microsoft.Data.Sqlite.SqliteException: SQLite Error 1: 'no such table: Products'., ErrorStackTrace:   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader()
+   at PosLibrary.Repo.ProductRepository.GetByBarcode(Int32 barcode) in C:\Users\Lenovo\Documents\3th_COURSE\04_Windows\PosLibrary\Repo\ProductRepository.cs:line 100
+   at PosLibrary.Services.ProductService.AddProduct(Product product) in C:\Users\Lenovo\Documents\3th_COURSE\04_Windows\PosLibrary\Services\ProductService.cs:line 43
+   at PosTest.ProductServiceTests.getProductByCategory_ShouldReturnCorrectProducts() in C:\Users\Lenovo\Documents\3th_COURSE\04_Windows\PosTest\ProductServiceTests.cs:line 133
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+.
+2025-05-21T18:16:40.4170349+00:00 mstest-trace INFORMATION MSTestExecutor:Test PosTest.ProductServiceTests.UpdateProduct_ShouldUpdateFields failed. ErrorMessage:Test method PosTest.ProductServiceTests.UpdateProduct_ShouldUpdateFields threw exception: 
+Microsoft.Data.Sqlite.SqliteException: SQLite Error 1: 'no such table: Products'., ErrorStackTrace:   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader()
+   at PosLibrary.Repo.ProductRepository.GetByBarcode(Int32 barcode) in C:\Users\Lenovo\Documents\3th_COURSE\04_Windows\PosLibrary\Repo\ProductRepository.cs:line 100
+   at PosLibrary.Services.ProductService.AddProduct(Product product) in C:\Users\Lenovo\Documents\3th_COURSE\04_Windows\PosLibrary\Services\ProductService.cs:line 43
+   at PosTest.ProductServiceTests.UpdateProduct_ShouldUpdateFields() in C:\Users\Lenovo\Documents\3th_COURSE\04_Windows\PosTest\ProductServiceTests.cs:line 89
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+.
+2025-05-21T18:16:40.4170441+00:00 mstest-trace INFORMATION MSTestExecutor:Test PosTest.ProductServiceTests.GetByName_ShouldReturnNull_WhenNameNotFound failed. ErrorMessage:Test method PosTest.ProductServiceTests.GetByName_ShouldReturnNull_WhenNameNotFound threw exception: 
+Microsoft.Data.Sqlite.SqliteException: SQLite Error 1: 'no such table: Products'., ErrorStackTrace:   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader()
+   at PosLibrary.Repo.ProductRepository.GetByName(String productName) in C:\Users\Lenovo\Documents\3th_COURSE\04_Windows\PosLibrary\Repo\ProductRepository.cs:line 82
+   at PosLibrary.Services.ProductService.GetProductByName(String name) in C:\Users\Lenovo\Documents\3th_COURSE\04_Windows\PosLibrary\Services\ProductService.cs:line 34
+   at PosTest.ProductServiceTests.GetByName_ShouldReturnNull_WhenNameNotFound() in C:\Users\Lenovo\Documents\3th_COURSE\04_Windows\PosTest\ProductServiceTests.cs:line 161
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+.
+2025-05-21T18:16:40.4170553+00:00 mstest-trace INFORMATION Executed test DeleteProduct_ShouldRemoveProduct
+2025-05-21T18:16:40.4171029+00:00 mstest-trace INFORMATION MSTestExecutor:Test PosTest.ProductServiceTests.GetAllProducts_ShouldReturnAll failed. ErrorMessage:Test method PosTest.ProductServiceTests.GetAllProducts_ShouldReturnAll threw exception: 
+Microsoft.Data.Sqlite.SqliteException: SQLite Error 1: 'no such table: Products'., ErrorStackTrace:   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader()
+   at PosLibrary.Repo.ProductRepository.GetByBarcode(Int32 barcode) in C:\Users\Lenovo\Documents\3th_COURSE\04_Windows\PosLibrary\Repo\ProductRepository.cs:line 100
+   at PosLibrary.Services.ProductService.AddProduct(Product product) in C:\Users\Lenovo\Documents\3th_COURSE\04_Windows\PosLibrary\Services\ProductService.cs:line 43
+   at PosTest.ProductServiceTests.GetAllProducts_ShouldReturnAll() in C:\Users\Lenovo\Documents\3th_COURSE\04_Windows\PosTest\ProductServiceTests.cs:line 121
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+.
+2025-05-21T18:16:40.4172415+00:00 mstest-trace INFORMATION Executed test GetByName_ShouldReturnProduct_WhenNameMatches
+2025-05-21T18:16:40.4172832+00:00 mstest-trace INFORMATION MSTestExecutor:Test PosTest.ProductServiceTests.GetByName_ShouldReturnProduct_WhenNameMatches failed. ErrorMessage:Test method PosTest.ProductServiceTests.GetByName_ShouldReturnProduct_WhenNameMatches threw exception: 
+Microsoft.Data.Sqlite.SqliteException: SQLite Error 1: 'no such table: Products'., ErrorStackTrace:   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader()
+   at PosLibrary.Repo.ProductRepository.GetByBarcode(Int32 barcode) in C:\Users\Lenovo\Documents\3th_COURSE\04_Windows\PosLibrary\Repo\ProductRepository.cs:line 100
+   at PosLibrary.Services.ProductService.AddProduct(Product product) in C:\Users\Lenovo\Documents\3th_COURSE\04_Windows\PosLibrary\Services\ProductService.cs:line 43
+   at PosTest.ProductServiceTests.GetByName_ShouldReturnProduct_WhenNameMatches() in C:\Users\Lenovo\Documents\3th_COURSE\04_Windows\PosTest\ProductServiceTests.cs:line 149
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+.
+2025-05-21T18:16:40.4173337+00:00 mstest-trace INFORMATION MSTestExecutor:Test PosTest.ProductServiceTests.DeleteProduct_ShouldRemoveProduct failed. ErrorMessage:Test method PosTest.ProductServiceTests.DeleteProduct_ShouldRemoveProduct threw exception: 
+Microsoft.Data.Sqlite.SqliteException: SQLite Error 1: 'no such table: Products'., ErrorStackTrace:   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader()
+   at PosLibrary.Repo.ProductRepository.GetByBarcode(Int32 barcode) in C:\Users\Lenovo\Documents\3th_COURSE\04_Windows\PosLibrary\Repo\ProductRepository.cs:line 100
+   at PosLibrary.Services.ProductService.AddProduct(Product product) in C:\Users\Lenovo\Documents\3th_COURSE\04_Windows\PosLibrary\Services\ProductService.cs:line 43
+   at PosTest.ProductServiceTests.DeleteProduct_ShouldRemoveProduct() in C:\Users\Lenovo\Documents\3th_COURSE\04_Windows\PosTest\ProductServiceTests.cs:line 109
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+.
+2025-05-21T18:16:40.4191839+00:00 mstest-trace INFORMATION Executed test AddCategory_ValidName_CallsRepoAdd
+2025-05-21T18:16:40.4213913+00:00 mstest-trace INFORMATION Executed test UpdateCategory_ValidInput_CallsRepoUpdate
+2025-05-21T18:16:40.4218722+00:00 mstest-trace INFORMATION Executed tests belonging to source C:\Users\Lenovo\Documents\3th_COURSE\04_Windows\PosTest\bin\Debug\net8.0\PosTest.dll

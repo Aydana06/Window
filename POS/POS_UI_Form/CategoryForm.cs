@@ -1,5 +1,8 @@
 ﻿using Microsoft.Data.Sqlite;
 using PosLibrary;
+using PosLibrary.Services;
+using PosLibrary.Repo;
+
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,41 +12,27 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PosLibrary.Model;
 
 namespace POS_UI_Form
 {
     public partial class CategoryForm : Form
     {
-        private static string DbPath = @"C:\Users\Lenovo\Documents\3th_COURSE\04_Windows\PosLibrary\Database.db";
-        private static string ConnectionString = $"Data Source = {DbPath}";
-
+        private string _connString = DatabaseConfig.ConnectionString;
+        private readonly CategoryService _categoryService;
         public CategoryForm()
         {
             InitializeComponent();
+
+            var repo = new CategoryRepository(_connString);
+            _categoryService = new CategoryService(repo);
             LoadCategories();
         }
 
         private void LoadCategories()
         {
-            var table = new DataTable();
-
-            using (var conn = new SqliteConnection(ConnectionString))
-            {
-                conn.Open();
-                var cmd = new SqliteCommand("SELECT * FROM Categories", conn);
-                using (var reader = cmd.ExecuteReader())
-                {
-                    table.Load(reader);
-                }
-            }
-
-            dataGridView1.DataSource = table;
-
-            if (dataGridView1.Columns.Contains("CategoryId"))
-            {
-                dataGridView1.Columns["CategoryId"].Visible = true;
-            }
-
+           var categories = _categoryService.GetCategories();
+           dataGridView1.DataSource = categories.ToList();
         }
         private void textBox1_TextChanged(object sender, EventArgs e)
         {}
@@ -52,53 +41,39 @@ namespace POS_UI_Form
         {}
         private void btnCategoryAdd_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtCategoryName.Text))
+            try
             {
-                MessageBox.Show("Please enter a category name.");
-                return;
+                _categoryService.AddCategory(txtCategoryName.Text);
+                MessageBox.Show("Category added.");
+                LoadCategories();
+                txtCategoryName.Clear();
             }
-
-            using (var conn = new SqliteConnection(ConnectionString))
+            catch (Exception ex)
             {
-                conn.Open();
-                var cmd = new SqliteCommand("INSERT INTO Categories (CategoryName) VALUES (@CategoryName)", conn);
-                cmd.Parameters.AddWithValue("@CategoryName", txtCategoryName.Text.Trim());
-
-                try
-                {
-                    cmd.ExecuteNonQuery();
-                    MessageBox.Show("Category added.");
-                    LoadCategories();
-                    txtCategoryName.Clear();
-                }
-                catch (SqliteException ex)
-                {
-                    MessageBox.Show("Error: " + ex.Message);
-                }
+                MessageBox.Show($"Error: {ex.Message}");
             }
-        }
+        }   
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            if (dataGridView1.CurrentRow == null || string.IsNullOrWhiteSpace(txtCategoryName.Text))
+            if (dataGridView1.CurrentRow == null)
             {
-                MessageBox.Show("Select a category and enter new name.");
+                MessageBox.Show("Select a category to edit");
                 return;
             }
 
-            var selectedId = Convert.ToInt32(dataGridView1.CurrentRow.Cells["CategoryId"].Value);
+            var selectedCategory = (Category)dataGridView1.CurrentRow.DataBoundItem;
+            var selectedId = selectedCategory.Id;
 
-            using (var conn = new SqliteConnection(ConnectionString))
+            try
             {
-                conn.Open();
-                var cmd = new SqliteCommand("UPDATE Categories SET CategoryName = @CategoryName WHERE CategoryId = @CategoryId", conn);
-                cmd.Parameters.AddWithValue("@CategoryName", txtCategoryName.Text.Trim());
-                cmd.Parameters.AddWithValue("@CategoryId", selectedId);
-                cmd.ExecuteNonQuery();
-
+                _categoryService.UpdateCategory(selectedId, txtCategoryName.Text);
                 MessageBox.Show("Category updated.");
                 LoadCategories();
                 txtCategoryName.Clear();
+            }
+            catch (Exception ex){
+                MessageBox.Show($"Error: {ex.Message}");
             }
         }
 
@@ -110,22 +85,24 @@ namespace POS_UI_Form
                 return;
             }
 
-            var selectedId = Convert.ToInt32(dataGridView1.CurrentRow.Cells["CategoryId"].Value);
+            var selectedCategory = (Category)dataGridView1.CurrentRow.DataBoundItem;
+            var selectedId = selectedCategory.Id;
 
             var result = MessageBox.Show("Are you sure to delete this category?", "Confirm", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
             {
-                using (var conn = new SqliteConnection(ConnectionString))
+                try
                 {
-                    conn.Open();
-                    var cmd = new SqliteCommand("DELETE FROM Categories WHERE CategoryId = @CategoryId", conn);
-                    cmd.Parameters.AddWithValue("@CategoryId", selectedId);
-                    cmd.ExecuteNonQuery();
+                    _categoryService.DeleteCategory(selectedId);
+                    MessageBox.Show("Category deleted.");
+                    LoadCategories();
+                    txtCategoryName.Clear();
                 }
-
-                MessageBox.Show("Category deleted.");
-                LoadCategories();
-                txtCategoryName.Clear();
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Error: {ex.Message}");
+                }
+               
             }
         }
 
@@ -134,9 +111,9 @@ namespace POS_UI_Form
 
         private void dataGridViewCategories_SelectionChanged(object sender, EventArgs e)
         {
-            if (dataGridView1.CurrentRow != null)
+            if(dataGridView1.CurrentRow != null)
             {
-                txtCategoryName.Text = dataGridView1.CurrentRow.Cells["Name"].Value.ToString();
+                txtCategoryName.Text = dataGridView1.CurrentRow.Cells["CategoryName"].Value.ToString();
             }
         }
     }

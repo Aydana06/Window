@@ -11,17 +11,15 @@ namespace PosLibrary
 {
     internal class PrintOrder
     {
-        private List<Order> ordersToPrint;
-        double amountPaid;
-        double change;
-        double grandTotal;
+        private List<OrderItem> ordersToPrint;
+        Sales sale;
 
-        public PrintOrder(List<Order> ordersToPrint, double amountPaid, double change, double totalPrice)
+        public PrintOrder(List<OrderItem> ordersToPrint, decimal amountPaid, decimal totalPrice)
         {
             this.ordersToPrint = ordersToPrint;
-            this.amountPaid = amountPaid;
-            this.change = change;
-            this.grandTotal = totalPrice;
+            this.sale = new Sales();
+            this.sale.AmountPaid = amountPaid;
+            this.sale.TotalAmount = totalPrice;
         }
 
         public void printReceipt()
@@ -93,15 +91,15 @@ namespace PosLibrary
             y += lineHeight;
 
             graphics.DrawString("Amount to pay:", boldFont, Brushes.Black, x, y);
-            graphics.DrawString(grandTotal.ToString("N0"), font, Brushes.Black, x + 320, y);
+            graphics.DrawString(sale.TotalAmount.ToString("N0"), font, Brushes.Black, x + 320, y);
             y += lineHeight;
 
             graphics.DrawString("Amount paid:", boldFont, Brushes.Black, x + 40, y);
-            graphics.DrawString(amountPaid.ToString("N0"), font, Brushes.Black, x + 320, y);
+            graphics.DrawString(sale.AmountPaid.ToString("N0"), font, Brushes.Black, x + 320, y);
             y += lineHeight;
 
             graphics.DrawString("Change:", boldFont, Brushes.Black, x, y);
-            graphics.DrawString(change.ToString("N0"), font, Brushes.Black, x + 320, y);
+            graphics.DrawString(sale.Change.ToString("N0"), font, Brushes.Black, x + 320, y);
         }
     }
 }

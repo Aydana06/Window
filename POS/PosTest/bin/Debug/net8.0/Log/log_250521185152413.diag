@@ -1,0 +1,67 @@
+2025-05-21T18:51:52.4423989+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Version: 1.7.0+927c3c21202a7b4cebddefb3a2337c683f4e5138
+2025-05-21T18:51:52.4601189+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Logging mode: asynchronous
+2025-05-21T18:51:52.4632845+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Logging level: Information
+2025-05-21T18:51:52.4633006+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION CreateBuilderAsync entry time: 18:51:52.385
+2025-05-21T18:51:52.4656773+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION PID: 2036
+2025-05-21T18:51:52.4659050+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Runtime information: win-x64 - .NET 8.0.14
+2025-05-21T18:51:52.4659235+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Runtime location: C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.14\System.Private.CoreLib.dll
+2025-05-21T18:51:52.4659373+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION IsDynamicCodeSupported: True
+2025-05-21T18:51:52.4660164+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Test module: C:\Users\Lenovo\Documents\3th_COURSE\04_Windows\PosTest\bin\Debug\net8.0\PosTest.dll
+2025-05-21T18:51:52.4662982+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Command line arguments: '--server --diagnostic --diagnostic-verbosity Information --diagnostic-output-directory C:\Users\Lenovo\Documents\3th_COURSE\04_Windows\PosTest\bin\Debug\net8.0\Log --results-directory C:\Users\Lenovo\Documents\3th_COURSE\04_Windows\PosTest\bin\Debug\net8.0\fine-code-coverage\coverage-tool-output --client-port 58958'
+2025-05-21T18:51:52.4682872+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION TESTINGPLATFORM_DEFAULT_HANG_TIMEOUT: ''
+2025-05-21T18:51:52.5135189+00:00 Microsoft.Testing.Platform.Hosts.TestHostBuilder INFORMATION Setting RegisterEnvironmentVariablesConfigurationSource: 'True'
+2025-05-21T18:51:52.5339932+00:00 Microsoft.Testing.Platform.Hosts.TestHostBuilder INFORMATION Setting PlatformExitProcessOnUnhandledException: 'False', config file: False environment variable: 
+2025-05-21T18:51:52.7977657+00:00 Microsoft.Testing.Platform.Requests.TestHostTestFrameworkInvoker INFORMATION Test framework UID: 'MSTestExtension' Version: '3.9.0' DisplayName: 'MSTest' Description: 'MSTest Framework for Microsoft Testing Platform'
+2025-05-21T18:51:52.8120155+00:00 Microsoft.Testing.Extensions.VSTestBridge.ObjectModel.MessageLoggerAdapter WARNING Runsettings datacollectors are not supported by Microsoft.Testing.Platform and will be ignored
+2025-05-21T18:51:52.8127672+00:00 Microsoft.Testing.Extensions.VSTestBridge.ObjectModel.MessageLoggerAdapter WARNING Runsettings attribute 'TestAdaptersPaths' is not supported by Microsoft.Testing.Platform and will be ignored
+2025-05-21T18:51:52.8510702+00:00 mstest-trace INFORMATION MSTestExecutor.RunTests: Running tests from sources.
+2025-05-21T18:51:52.8572517+00:00 mstest-trace INFORMATION CollectSourceInformation value found : False 
+2025-05-21T18:51:52.9133062+00:00 mstest-trace INFORMATION MSTestDiscoverer: Found 15 tests from source C:\Users\Lenovo\Documents\3th_COURSE\04_Windows\PosTest\bin\Debug\net8.0\PosTest.dll
+2025-05-21T18:51:52.9488244+00:00 mstest-trace INFORMATION Created unit-test runner C:\Users\Lenovo\Documents\3th_COURSE\04_Windows\PosTest\bin\Debug\net8.0\PosTest.dll
+2025-05-21T18:51:52.9600977+00:00 Microsoft.Testing.Extensions.VSTestBridge.ObjectModel.MessageLoggerAdapter INFORMATION Test Parallelization enabled for C:\Users\Lenovo\Documents\3th_COURSE\04_Windows\PosTest\bin\Debug\net8.0\PosTest.dll (Workers: 14, Scope: MethodLevel)
+2025-05-21T18:51:52.9788715+00:00 mstest-trace INFORMATION Executing test GetAllProducts_ShouldReturnAll
+2025-05-21T18:51:52.9788805+00:00 mstest-trace INFORMATION Executing test GetByName_ShouldReturnProduct_WhenNameMatches
+2025-05-21T18:51:52.9815626+00:00 mstest-trace INFORMATION Executing test UpdateCategory_EmptyName_ThrowsException
+2025-05-21T18:51:52.9815636+00:00 mstest-trace INFORMATION Executing test DeleteCategory_ValidId_CallsRepoDelete
+2025-05-21T18:51:52.9816153+00:00 mstest-trace INFORMATION Executing test GetByName_ShouldReturnNull_WhenNameNotFound
+2025-05-21T18:51:52.9816256+00:00 mstest-trace INFORMATION Executing test AddCategory_ValidName_CallsRepoAdd
+2025-05-21T18:51:52.9816653+00:00 mstest-trace INFORMATION Executing test DeleteProduct_ShouldRemoveProduct
+2025-05-21T18:51:52.9816776+00:00 mstest-trace INFORMATION Executing test getProductByCategory_ShouldReturnCorrectProducts
+2025-05-21T18:51:52.9816926+00:00 mstest-trace INFORMATION Executing test AddCategory_EmptyName_ThrowsException
+2025-05-21T18:51:52.9817050+00:00 mstest-trace INFORMATION Executing test GetCategories_ReturnsFromRepo
+2025-05-21T18:51:52.9817369+00:00 mstest-trace INFORMATION Executing test UpdateProduct_ShouldUpdateFields
+2025-05-21T18:51:52.9817688+00:00 mstest-trace INFORMATION Executing test AddProduct_WithDuplicateBarcode_ShouldThrowException
+2025-05-21T18:51:52.9817934+00:00 mstest-trace INFORMATION Executing test AddProduct_ShouldAddProductSuccesfully
+2025-05-21T18:51:52.9818855+00:00 mstest-trace INFORMATION Executing test UpdateCategory_ValidInput_CallsRepoUpdate
+2025-05-21T18:51:53.0864458+00:00 mstest-trace INFORMATION Executed test UpdateCategory_EmptyName_ThrowsException
+2025-05-21T18:51:53.0872126+00:00 mstest-trace INFORMATION Executed test AddCategory_EmptyName_ThrowsException
+2025-05-21T18:51:53.0896045+00:00 mstest-trace INFORMATION Executed test getProductByCategory_ShouldReturnCorrectProducts
+2025-05-21T18:51:53.0898594+00:00 mstest-trace INFORMATION MSTestExecutor:Test PosTest.ProductServiceTests.getProductByCategory_ShouldReturnCorrectProducts failed. ErrorMessage:One or more errors occurred. (Test method PosTest.ProductServiceTests.getProductByCategory_ShouldReturnCorrectProducts threw exception: 
+System.NullReferenceException: Object reference not set to an instance of an object.) (TestCleanup method PosTest.ProductServiceTests.Cleanup threw exception. System.NullReferenceException: Object reference not set to an instance of an object..), ErrorStackTrace:.
+2025-05-21T18:51:53.0899513+00:00 mstest-trace INFORMATION Executed test AddProduct_ShouldAddProductSuccesfully
+2025-05-21T18:51:53.0899730+00:00 mstest-trace INFORMATION Executed test GetByName_ShouldReturnNull_WhenNameNotFound
+2025-05-21T18:51:53.0900083+00:00 mstest-trace INFORMATION MSTestExecutor:Test PosTest.ProductServiceTests.AddProduct_ShouldAddProductSuccesfully failed. ErrorMessage:One or more errors occurred. (Test method PosTest.ProductServiceTests.AddProduct_ShouldAddProductSuccesfully threw exception: 
+System.NullReferenceException: Object reference not set to an instance of an object.) (TestCleanup method PosTest.ProductServiceTests.Cleanup threw exception. System.NullReferenceException: Object reference not set to an instance of an object..), ErrorStackTrace:.
+2025-05-21T18:51:53.0900092+00:00 mstest-trace INFORMATION MSTestExecutor:Test PosTest.ProductServiceTests.GetByName_ShouldReturnNull_WhenNameNotFound failed. ErrorMessage:One or more errors occurred. (Test method PosTest.ProductServiceTests.GetByName_ShouldReturnNull_WhenNameNotFound threw exception: 
+System.NullReferenceException: Object reference not set to an instance of an object.) (TestCleanup method PosTest.ProductServiceTests.Cleanup threw exception. System.NullReferenceException: Object reference not set to an instance of an object..), ErrorStackTrace:.
+2025-05-21T18:51:53.0901216+00:00 mstest-trace INFORMATION Executed test GetAllProducts_ShouldReturnAll
+2025-05-21T18:51:53.0901432+00:00 mstest-trace INFORMATION Executed test AddProduct_WithDuplicateBarcode_ShouldThrowException
+2025-05-21T18:51:53.0901514+00:00 mstest-trace INFORMATION MSTestExecutor:Test PosTest.ProductServiceTests.GetAllProducts_ShouldReturnAll failed. ErrorMessage:One or more errors occurred. (Test method PosTest.ProductServiceTests.GetAllProducts_ShouldReturnAll threw exception: 
+System.NullReferenceException: Object reference not set to an instance of an object.) (TestCleanup method PosTest.ProductServiceTests.Cleanup threw exception. System.NullReferenceException: Object reference not set to an instance of an object..), ErrorStackTrace:.
+2025-05-21T18:51:53.0901786+00:00 mstest-trace INFORMATION MSTestExecutor:Test PosTest.ProductServiceTests.AddProduct_WithDuplicateBarcode_ShouldThrowException failed. ErrorMessage:One or more errors occurred. (Test method threw exception System.NullReferenceException, but exception System.Exception was expected. Exception message: System.NullReferenceException: Object reference not set to an instance of an object.) (TestCleanup method PosTest.ProductServiceTests.Cleanup threw exception. System.NullReferenceException: Object reference not set to an instance of an object..), ErrorStackTrace:.
+2025-05-21T18:51:53.0903450+00:00 mstest-trace INFORMATION Executed test UpdateProduct_ShouldUpdateFields
+2025-05-21T18:51:53.0903752+00:00 mstest-trace INFORMATION MSTestExecutor:Test PosTest.ProductServiceTests.UpdateProduct_ShouldUpdateFields failed. ErrorMessage:One or more errors occurred. (Test method PosTest.ProductServiceTests.UpdateProduct_ShouldUpdateFields threw exception: 
+System.NullReferenceException: Object reference not set to an instance of an object.) (TestCleanup method PosTest.ProductServiceTests.Cleanup threw exception. System.NullReferenceException: Object reference not set to an instance of an object..), ErrorStackTrace:.
+2025-05-21T18:51:53.0905980+00:00 mstest-trace INFORMATION Executed test GetByName_ShouldReturnProduct_WhenNameMatches
+2025-05-21T18:51:53.0906332+00:00 mstest-trace INFORMATION MSTestExecutor:Test PosTest.ProductServiceTests.GetByName_ShouldReturnProduct_WhenNameMatches failed. ErrorMessage:One or more errors occurred. (Test method PosTest.ProductServiceTests.GetByName_ShouldReturnProduct_WhenNameMatches threw exception: 
+System.NullReferenceException: Object reference not set to an instance of an object.) (TestCleanup method PosTest.ProductServiceTests.Cleanup threw exception. System.NullReferenceException: Object reference not set to an instance of an object..), ErrorStackTrace:.
+2025-05-21T18:51:53.0908053+00:00 mstest-trace INFORMATION Executed test DeleteProduct_ShouldRemoveProduct
+2025-05-21T18:51:53.0908369+00:00 mstest-trace INFORMATION MSTestExecutor:Test PosTest.ProductServiceTests.DeleteProduct_ShouldRemoveProduct failed. ErrorMessage:One or more errors occurred. (Test method PosTest.ProductServiceTests.DeleteProduct_ShouldRemoveProduct threw exception: 
+System.NullReferenceException: Object reference not set to an instance of an object.) (TestCleanup method PosTest.ProductServiceTests.Cleanup threw exception. System.NullReferenceException: Object reference not set to an instance of an object..), ErrorStackTrace:.
+2025-05-21T18:51:53.0934552+00:00 mstest-trace INFORMATION Executing test GetCategoryById_ReturnsCorrectCategory
+2025-05-21T18:51:53.0945891+00:00 mstest-trace INFORMATION Executed test GetCategories_ReturnsFromRepo
+2025-05-21T18:51:53.0947106+00:00 mstest-trace INFORMATION Executed test GetCategoryById_ReturnsCorrectCategory
+2025-05-21T18:51:53.0952503+00:00 mstest-trace INFORMATION Executed test DeleteCategory_ValidId_CallsRepoDelete
+2025-05-21T18:51:53.1123015+00:00 mstest-trace INFORMATION Executed test AddCategory_ValidName_CallsRepoAdd
+2025-05-21T18:51:53.1142376+00:00 mstest-trace INFORMATION Executed test UpdateCategory_ValidInput_CallsRepoUpdate
+2025-05-21T18:51:53.1146447+00:00 mstest-trace INFORMATION Executed tests belonging to source C:\Users\Lenovo\Documents\3th_COURSE\04_Windows\PosTest\bin\Debug\net8.0\PosTest.dll

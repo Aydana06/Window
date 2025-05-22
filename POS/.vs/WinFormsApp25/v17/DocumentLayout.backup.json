@@ -1,7 +1,24 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Lenovo\\Documents\\Window\\POS\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F8723A3C-C0B5-4603-8695-1D8575163479}|POS_UI_Form\\POS_UI_Form.csproj|c:\\users\\lenovo\\documents\\window\\pos\\pos_ui_form\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F8723A3C-C0B5-4603-8695-1D8575163479}|POS_UI_Form\\POS_UI_Form.csproj|solutionrelative:pos_ui_form\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EA41573-CACC-4E97-BE50-131A15F2CC39}|UserControlLibrary\\UserControlLibrary.csproj|c:\\users\\lenovo\\documents\\window\\pos\\usercontrollibrary\\orderitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8EA41573-CACC-4E97-BE50-131A15F2CC39}|UserControlLibrary\\UserControlLibrary.csproj|solutionrelative:usercontrollibrary\\orderitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{927C17ED-2348-47BE-A1BC-86A2711C5DEC}|PosLibrary\\PosLibrary.csproj|c:\\users\\lenovo\\documents\\window\\pos\\poslibrary\\model\\orderitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{927C17ED-2348-47BE-A1BC-86A2711C5DEC}|PosLibrary\\PosLibrary.csproj|solutionrelative:poslibrary\\model\\orderitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22B2E315-F8DF-4487-98C7-97DB90FA8768}|PosTest\\PosTest.csproj|c:\\users\\lenovo\\documents\\window\\pos\\postest\\orderservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{22B2E315-F8DF-4487-98C7-97DB90FA8768}|PosTest\\PosTest.csproj|solutionrelative:postest\\orderservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,8 +26,22 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Documents\\Window\\POS\\POS_UI_Form\\Form1.cs",
+              "RelativeDocumentMoniker": "POS_UI_Form\\Form1.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Documents\\Window\\POS\\POS_UI_Form\\Form1.cs",
+              "RelativeToolTip": "POS_UI_Form\\Form1.cs",
+              "ViewState": "AgIAAEIBAAAAAAAAAAAcwFsBAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T08:33:36.338Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
@@ -36,8 +67,42 @@
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "OrderItem.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Documents\\Window\\POS\\UserControlLibrary\\OrderItem.cs",
+              "RelativeDocumentMoniker": "UserControlLibrary\\OrderItem.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Documents\\Window\\POS\\UserControlLibrary\\OrderItem.cs [Design]",
+              "RelativeToolTip": "UserControlLibrary\\OrderItem.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T08:36:44.017Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "OrderItem.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Documents\\Window\\POS\\PosLibrary\\Model\\OrderItem.cs",
+              "RelativeDocumentMoniker": "PosLibrary\\Model\\OrderItem.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Documents\\Window\\POS\\PosLibrary\\Model\\OrderItem.cs",
+              "RelativeToolTip": "PosLibrary\\Model\\OrderItem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T08:35:44.392Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "OrderServiceTests.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Documents\\Window\\POS\\PosTest\\OrderServiceTests.cs",
+              "RelativeDocumentMoniker": "PosTest\\OrderServiceTests.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Documents\\Window\\POS\\PosTest\\OrderServiceTests.cs",
+              "RelativeToolTip": "PosTest\\OrderServiceTests.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T08:32:56.04Z",
+              "EditorCaption": ""
             }
           ]
         },

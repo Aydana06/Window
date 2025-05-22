@@ -6,47 +6,53 @@ using System.Net.NetworkInformation;
 using Microsoft.Data.Sqlite;
 using System.Data;
 using System.Windows.Forms;
+using PosLibrary.Services;
+using PosLibrary.Repo;
+using System.Reflection.Metadata.Ecma335;
+using Microsoft.EntityFrameworkCore.Query.Internal;
 
 namespace POS_UI_Form
 {
     public partial class MyPOS : Form
     {
-        private static string DbPath = @"C:\Users\Lenovo\Documents\3th_COURSE\04_Windows\PosLibrary\Database.db";
-        private static string ConnectionString = $"Data Source = {DbPath}";
         private string? userRole;
         public int barcode;
-        double totalAmount;
-        List<Order> orders = new List<Order>();
+        decimal totalAmount;
+        private readonly CategoryService _categoryService;
+        private readonly ProductService _productService;
+
+        List<PosLibrary.Model.OrderItem> orders = new List<PosLibrary.Model.OrderItem>();
 
         private void UpdateTotalAmount()
         {
             totalAmount = 0;
-            foreach (OrderItem item in flowLayoutPanel2.Controls.OfType<OrderItem>())
+            foreach (OrderItemControl item in flowLayoutPanel2.Controls.OfType<OrderItemControl>())
             {
-                totalAmount += item.Price * item.Quantity;
+                totalAmount += item.Total;
             }
-
             lblTotalPrice.Text = $"{totalAmount}₮";
         }
 
         private void LoadOrdersFromUI()
         {
             orders.Clear();
-            foreach (var orderItem in flowLayoutPanel2.Controls.OfType<OrderItem>())
+            foreach (var orderItemControl in flowLayoutPanel2.Controls.OfType<OrderItemControl>())
             {
-                orders.Add(new Order
+                orders.Add(new PosLibrary.Model.OrderItem
                 {
-                   
-                    ProductName = orderItem.ItemName,
-                    Price = orderItem.Price,
-                    Quantity = orderItem.Quantity,
+                    ProductName = orderItemControl.ItemName,
+                    Price = orderItemControl.Price,
+                    Quantity = orderItemControl.Quantity
                 });
             }
         }
-        public MyPOS(string role)
+        public MyPOS(string role, CategoryService categoryService, ProductService productService)
         {
             InitializeComponent();
+            _categoryService = categoryService;
             userRole = role;
+            _productService = productService;
+            LoadCategoryButtons();
         }
 
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
@@ -130,206 +136,161 @@ namespace POS_UI_Form
 
             }
 
-            LoadCategory();
+            LoadCategoryButtons();
             btnProfile.Text = userRole;
         }
 
         //CategoryBtn
-        void LoadCategory()
+        void LoadCategoryButtons()
         {
             flowLayoutPanelCategory.Controls.Clear();
-            using (var connection = new SqliteConnection(ConnectionString))
+            int y = 20;
+            var categories = _categoryService.GetCategories();
+            foreach (var c in categories)
             {
-                connection.Open();
-                string query = "SELECT DISTINCT * FROM Categories WHERE CategoryId IS NOT NULL";
-                using (SqliteCommand cmd = new SqliteCommand(query, connection))
-                using (SqliteDataReader reader = cmd.ExecuteReader())
+                var btn = new Button
                 {
-                    int y = 20;
-                    while (reader.Read())
-                    {
-                        string? category = reader["CategoryId"].ToString();
-                        string? categoryName = reader["CategoryName"].ToString();
-                        Button btn = new Button();
-                        btn.Text = $"{categoryName}";
-                        btn.Width = 180;
-                        btn.Height = 100;
-                        btn.Top = y;
-                        btn.Left = 20;
-                        btn.Click += (s, e) => showCategoryProducts(Convert.ToInt32(category));
-                        flowLayoutPanelCategory.Controls.Add(btn);
-                        y += 50;
-                    }
-                }
+                    Text = c.Name,
+                    Width = 180,
+                    Height = 100,
+                    Top = y,
+                    Left = 20,
+                    Tag = c.Id
+                };
+
+                btn.Click += (s, e) => showCategoryProducts(Convert.ToInt32(((Button)s).Tag));
+                flowLayoutPanelCategory.Controls.Add(btn);
+                y += 50;
             }
         }
+
         //CategoryBtn дээр дарахад гарах products
         void showCategoryProducts(int categoryId)
         {
             flowLayoutPanelProducts.Controls.Clear();
-            using (var connection = new SqliteConnection(ConnectionString))
+            flowLayoutPanelProducts.AutoScroll = true;
+            var products = _productService.GetProductsByCategory(categoryId);
+            foreach (var product in products)
             {
-                connection.Open();
-                string query = "SELECT * FROM Products WHERE CategoryId=@CategoryId";
-                using (SqliteCommand cmd = new SqliteCommand(query, connection))
-                {
-                    cmd.Parameters.AddWithValue("@CategoryId", categoryId);
-                    using (SqliteDataReader reader = cmd.ExecuteReader())
-                    {
-                        flowLayoutPanelCategory.AutoScroll = true;
-                        int y = 10;
-                        while (reader.Read())
-                        {
-                            string productName = reader["Name"].ToString();
-                            string imagePath = reader["ImagePath"].ToString();
-                            int barcode = Convert.ToInt32(reader["Barcode"]);
-                            decimal price = Convert.ToDecimal(reader["Price"]);
-
-                            //products deer darahad hiigdeh uildel
-                            void panelClickHandler(object sender, EventArgs e)
-                            {
-                                AddOrderItemByProductName(productName);
-                                txtProductCode.Text = barcode.ToString();
-                                UpdateTotalAmount();
-                            }
-
-                            Panel panel = new Panel
-                            {
-                                Width = 135,
-                                Height = 180,
-                                Top = y,
-                                Left = 10,
-                                BorderStyle = BorderStyle.FixedSingle,
-                                Cursor = Cursors.Hand
-                            };
-
-                            PictureBox pictureBox = new PictureBox
-                            {
-                                Width = 115,
-                                Height = 100,
-                                Top = 5,
-                                Left = 10,
-                                SizeMode = PictureBoxSizeMode.Zoom
-                            };
-                            
-
-                            if (!string.IsNullOrEmpty(imagePath) && File.Exists(imagePath))
-                            {
-                                try
-                                {
-                                    if (File.Exists(imagePath))
-                                    {
-                                        using (var img = Image.FromFile(imagePath))
-                                        {
-                                            pictureBox.Image = new Bitmap(img);
-                                        }
-                                    }
-                                }
-                                catch (OutOfMemoryException ex)
-                                {
-                                    MessageBox.Show($"Зураг ачаалж чадсангүй: {imagePath}\n{ex.Message}");
-                                }
-                            }
-
-                            Label nameLabel = new Label
-                            {
-                                Text = productName,
-                                Top = 110,
-                                Left = 5,
-                                Width = 125,
-                                Height = 25,
-                                TextAlign = ContentAlignment.MiddleCenter
-                            };
-
-                            Label priceLabel = new Label
-                            {
-                                Text = $"{price:0.00}₮",
-                                Top = 135,
-                                Left = 5,
-                                Width = 125,
-                                Height = 20,
-                                ForeColor = Color.Green,
-                                Font = new Font("Arial", 9, FontStyle.Bold),
-                                TextAlign = ContentAlignment.MiddleCenter
-                            };
-
-                            panel.Controls.Add(pictureBox);
-                            panel.Controls.Add(nameLabel);
-                            panel.Controls.Add(priceLabel);
-
-                            panel.Click += panelClickHandler;
-                            nameLabel.Click += panelClickHandler;
-                            pictureBox.Click += panelClickHandler;
-                            priceLabel.Click += panelClickHandler;
-                            flowLayoutPanelProducts.Controls.Add(panel);
-                            y += 190;
-                        }
-
-                    }
-                }
+                var panel = CreateProductPanel(product);
+                flowLayoutPanelProducts.Controls.Add(panel);
             }
         }
 
+        private Panel CreateProductPanel(Product product)
+        {
+            int y = 10;
+            var panel = new Panel
+            {
+                Width = 135,
+                Height = 180,
+                Top = y,
+                Left = 10,
+                BorderStyle = BorderStyle.FixedSingle,
+                Cursor = Cursors.Hand,
+            };
+
+            var pictureBox = new PictureBox
+            {
+                Width = 115,
+                Height = 100,
+                Top = 5,
+                Left = 10,
+                SizeMode = PictureBoxSizeMode.Zoom,
+            };
+            if (!string.IsNullOrEmpty(product.ImagePath) && File.Exists(product.ImagePath)) {
+                try
+                {
+                    using var img = Image.FromFile(product.ImagePath);
+                    pictureBox.Image = new Bitmap(img);
+                }
+                catch (OutOfMemoryException ex)
+                {
+                    MessageBox.Show("Зураг ачаалж чадсангүй: {product.ImagePath}\n{ex.Message}");
+                }
+            }
+
+            var nameLabel = new Label
+            {
+                Text = product.Name,
+                Top = 110,
+                Left = 5,
+                Width = 125,
+                Height = 25,
+                TextAlign = ContentAlignment.MiddleCenter,
+
+            };
+
+            var priceLabel = new Label
+            {
+                Text = $"{product.Price:0.00}",
+                Top = 135,
+                Left = 5,
+                Width = 125,
+                Height = 20,
+                ForeColor = Color.Green,
+                Font = new Font("Arial", 9, FontStyle.Bold),
+                TextAlign = ContentAlignment.MiddleCenter,
+            };
+
+            panel.Controls.Add(pictureBox);
+            panel.Controls.Add(nameLabel);
+            panel.Controls.Add(priceLabel);
+
+            void panelClickHandler(object sender, EventArgs e)
+            {
+                AddOrderItemByProductName(product.Name);
+                txtProductCode.Text = product.Barcode.ToString();
+                UpdateTotalAmount();
+            };
+            panel.Click += panelClickHandler;
+            nameLabel.Click += panelClickHandler;
+            pictureBox.Click += panelClickHandler;
+            priceLabel.Click += panelClickHandler;
+            return panel;
+        }
         //OrderItem-үүдийг нэмэх
 
-        void AddOrderItemByProductName(string? productName)
+        void AddOrderItemByProductName(string? name)
         {
-            if (string.IsNullOrWhiteSpace(productName)) return;
+            if (string.IsNullOrWhiteSpace(name)) return;
+            var product = _productService.GetProductByName(name);
 
-            using (var connection = new SqliteConnection(ConnectionString))
+            // Хэрэв өмнө нь Panel-д байгаа бол тоог нэмэгдүүл
+            var existingItem = flowLayoutPanel2.Controls
+                                    .OfType<OrderItemControl>()
+                                    .FirstOrDefault(item => item.ItemName == name);
+
+            if (existingItem != null)
             {
-                connection.Open();
-                string query = "SELECT * FROM Products WHERE Name=@Name";
-                using (var cmd = new SqliteCommand(query, connection))
+                existingItem.Quantity++;
+                UpdateTotalAmount();
+            }
+            else
+            {
+                // Шинээр OrderItem үүсгээд panel рүү нэмэх
+                var orderItem = new OrderItemControl
                 {
-                    cmd.Parameters.AddWithValue("@Name", productName);
-                    using (var reader = cmd.ExecuteReader())
-                    {
-                        while (reader.Read())
-                        {
-                            flowLayoutPanel2.AutoScroll = true;
-                            string name = reader["Name"].ToString()!;
-                            double price = Convert.ToDouble(reader["Price"]);
+                    ItemName = name,
+                    Price = product.Price,
+                    Quantity = 1,
+                    Width = flowLayoutPanel2.Width - 20,
+                    Dock = DockStyle.None,
+                };
 
-                            // Хэрэв өмнө нь Panel-д байгаа бол тоог нэмэгдүүл
-                            var existingItem = flowLayoutPanel2.Controls
-                                .OfType<OrderItem>()
-                                .FirstOrDefault(item => item.ItemName == name);
+                orderItem.QuantityChanged += (sender, args) => UpdateTotalAmount();
 
-                            if (existingItem != null)
-                            {
-                                existingItem.Quantity++;
-                                UpdateTotalAmount();
-
-                            }
-                            else
-                            {
-                                // Шинээр OrderItem үүсгээд panel рүү нэмэх
-                                var orderItem = new OrderItem
-                                {
-                                    ItemName = name,
-                                    Price = price,
-                                    Quantity = 1,
-                                    Width = flowLayoutPanel2.Width - 20,
-                                    Dock = DockStyle.None,
-                                };
-
-                                orderItem.QuantityChanged += (sender, args) => UpdateTotalAmount();
-
-                                flowLayoutPanel2.Controls.Add(orderItem);
-                                flowLayoutPanel2.Controls.SetChildIndex(orderItem, 0);
-                                orders.Add(new Order
-                                {
-                                    ProductName = name,
-                                    Price = price,
-                                    Quantity = 1
-                                });
-                            }
-                        }
-                    }
-                }
+                flowLayoutPanel2.Controls.Add(orderItem);
+                flowLayoutPanel2.Controls.SetChildIndex(orderItem, 0);
+                orders.Add(new PosLibrary.Model.OrderItem
+                {
+                    ProductName = name,
+                    Price = product.Price,
+                    Quantity = 1
+                });
             }
         }
+
         private void btnProfile_Click(object sender, EventArgs e)
         { }
 
@@ -363,96 +324,23 @@ namespace POS_UI_Form
         private void LoadByBarcodeToPanel(int barcode)
         {
             flowLayoutPanelProducts.Controls.Clear();
+            flowLayoutPanelProducts.AutoScroll = true;
+            flowLayoutPanelProducts.FlowDirection = FlowDirection.LeftToRight;
+            flowLayoutPanelProducts.WrapContents = true;
+            var product = _productService.GetProductByBarcode(barcode);
 
-
-
-            using (var connection = new SqliteConnection(ConnectionString))
+            void panelClickHandler(object sender, EventArgs e)
             {
-                flowLayoutPanelProducts.AutoScroll = true;
-                flowLayoutPanelProducts.FlowDirection = FlowDirection.LeftToRight;
-                flowLayoutPanelProducts.WrapContents = true;
+                AddOrderItemByProductName(product.Name);
+            }
 
-                connection.Open();
-                string query = "SELECT * FROM Products WHERE Barcode=@Barcode";
-                using (SqliteCommand cmd = new SqliteCommand(query, connection))
-                {
-                    cmd.Parameters.AddWithValue("@Barcode", barcode);
-                    using (SqliteDataReader reader = cmd.ExecuteReader())
-                    {
-                        int y = 10;
-                        while (reader.Read())
-                        {
-                            string productName = reader["Name"].ToString();
-                            string imagePath = reader["ImagePath"].ToString();
-                            decimal price = Convert.ToDecimal(reader["Price"]);
+            var panel = CreateProductPanel(product);
+            flowLayoutPanelProducts.Controls.Add(panel);
 
-                            void panelClickHandler(object sender, EventArgs e)
-                            {
-                                AddOrderItemByProductName(productName);
-                            }
 
-                            Panel panel = new Panel
-                            {
-                                Width = 135,
-                                Height = 180,
-                                BorderStyle = BorderStyle.FixedSingle,
-                                Cursor = Cursors.Hand
-                            };
-
-                            PictureBox pictureBox = new PictureBox
-                            {
-                                Width = 115,
-                                Height = 100,
-                                Top = 5,
-                                Left = 10,
-                                SizeMode = PictureBoxSizeMode.Zoom
-                            };
-
-                            if (!string.IsNullOrEmpty(imagePath) && File.Exists(imagePath))
-                            {
-                                pictureBox.Image = Image.FromFile(imagePath);
-                            }
-
-                            Label nameLabel = new Label
-                            {
-                                Text = productName,
-                                Top = 110,
-                                Left = 5,
-                                Width = 125,
-                                Height = 25,
-                                TextAlign = ContentAlignment.MiddleCenter
-                            };
-
-                            Label priceLabel = new Label
-                            {
-                                Text = $"{price:0.00}₮",
-                                Top = 135,
-                                Left = 5,
-                                Width = 125,
-                                Height = 20,
-                                ForeColor = Color.Green,
-                                Font = new Font("Arial", 9, FontStyle.Bold),
-                                TextAlign = ContentAlignment.MiddleCenter
-                            };
-
-                            panel.Controls.Add(pictureBox);
-                            panel.Controls.Add(nameLabel);
-                            panel.Controls.Add(priceLabel);
-
-                            panel.Click += panelClickHandler;
-                            nameLabel.Click += panelClickHandler;
-                            pictureBox.Click += panelClickHandler;
-                            priceLabel.Click += panelClickHandler;
-                            flowLayoutPanelProducts.Controls.Add(panel);
-                            y += 190;
-                        }
-
-                        if (flowLayoutPanelProducts.Controls.Count == 0)
-                        {
-                            MessageBox.Show("Ийм кодтой бараа олдсонгүй.");
-                        }
-                    }
-                }
+            if (flowLayoutPanelProducts.Controls.Count == 0)
+            {
+                MessageBox.Show("Ийм кодтой бараа олдсонгүй.");
             }
         }
 
@@ -479,10 +367,10 @@ namespace POS_UI_Form
             }
 
             barcode = int.Parse(txtProductCode.Text);
-            Product product = GetProductByBarcode(barcode);
+            var product = _productService.GetProductByBarcode(barcode);
             if (product != null)
             {
-                ManageProduct form = new("Edit", barcode);
+                ManageProduct form = new("Update", barcode);
                 form.ShowDialog();
             }
             else
@@ -490,37 +378,6 @@ namespace POS_UI_Form
                 MessageBox.Show("Бараа олдсонгүй.");
                 return;
             }
-        }
-
-        //Barcode-аар products авах
-        private Product GetProductByBarcode(int barcode)
-        {
-            using (var connection = new SqliteConnection(ConnectionString))
-            {
-                connection.Open();
-                string query = "SELECT * FROM Products WHERE Barcode=@Barcode";
-
-                using (var cmd = new SqliteCommand(query, connection))
-                {
-                    cmd.Parameters.AddWithValue("@Barcode", barcode);
-                    using (var reader = cmd.ExecuteReader())
-                    {
-                        if (reader.Read())
-                        {
-                            return new Product
-                            {
-                                Price = Convert.ToInt32(reader["Price"]),
-                                Name = (reader["Name"].ToString()),
-                                Barcode = Convert.ToInt32(reader["Barcode"]),
-                                Quantity = Convert.ToInt32(reader["Quantity"]),
-                                ImagePath = reader["ImagePath"].ToString(),
-                                CategoryId = Convert.ToInt32(reader["CategoryId"])
-                            };
-                        }
-                    }
-                }
-            }
-            return null;
         }
 
         //Шинээр бараа нэмэх
@@ -540,17 +397,19 @@ namespace POS_UI_Form
         {
             CategoryForm categoryForm = new CategoryForm();
             categoryForm.ShowDialog();
+            LoadCategoryButtons();
         }
 
         private void button2_Click(object sender, EventArgs e)
-        {
+        { 
             var result = MessageBox.Show("Та бүх барааг цэвэрлэхдээ итгэлтэй байна уу?",
-                             "Баталгаажуулалт", MessageBoxButtons.YesNo);
+                                "Баталгаажуулалт", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
             {
                 flowLayoutPanel2.Controls.Clear();
                 lblTotalPrice.Text = "";
             }
+
         }
     }
 }

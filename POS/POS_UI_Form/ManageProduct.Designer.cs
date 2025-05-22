@@ -59,6 +59,7 @@
             txtName.Name = "txtName";
             txtName.Size = new Size(125, 30);
             txtName.TabIndex = 1;
+            txtName.TextChanged += txtName_TextChanged;
             // 
             // txtBarcode
             // 

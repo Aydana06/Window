@@ -1,0 +1,76 @@
+2025-05-21T20:00:24.1929629+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Version: 1.7.0+927c3c21202a7b4cebddefb3a2337c683f4e5138
+2025-05-21T20:00:24.2020476+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Logging mode: asynchronous
+2025-05-21T20:00:24.2029442+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Logging level: Information
+2025-05-21T20:00:24.2029489+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION CreateBuilderAsync entry time: 20:00:24.170
+2025-05-21T20:00:24.2042206+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION PID: 8964
+2025-05-21T20:00:24.2043344+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Runtime information: win-x64 - .NET 8.0.14
+2025-05-21T20:00:24.2043429+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Runtime location: C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.14\System.Private.CoreLib.dll
+2025-05-21T20:00:24.2043496+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION IsDynamicCodeSupported: True
+2025-05-21T20:00:24.2043866+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Test module: C:\Users\Lenovo\Documents\3th_COURSE\04_Windows\PosTest\bin\Debug\net8.0\PosTest.dll
+2025-05-21T20:00:24.2045158+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Command line arguments: '--server --diagnostic --diagnostic-verbosity Information --diagnostic-output-directory C:\Users\Lenovo\Documents\3th_COURSE\04_Windows\PosTest\bin\Debug\net8.0\Log --results-directory C:\Users\Lenovo\Documents\3th_COURSE\04_Windows\PosTest\bin\Debug\net8.0\fine-code-coverage\coverage-tool-output --client-port 59884'
+2025-05-21T20:00:24.2055465+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION TESTINGPLATFORM_DEFAULT_HANG_TIMEOUT: ''
+2025-05-21T20:00:24.2221903+00:00 Microsoft.Testing.Platform.Hosts.TestHostBuilder INFORMATION Setting RegisterEnvironmentVariablesConfigurationSource: 'True'
+2025-05-21T20:00:24.2335266+00:00 Microsoft.Testing.Platform.Hosts.TestHostBuilder INFORMATION Setting PlatformExitProcessOnUnhandledException: 'False', config file: False environment variable: 
+2025-05-21T20:00:24.3903566+00:00 Microsoft.Testing.Platform.Requests.TestHostTestFrameworkInvoker INFORMATION Test framework UID: 'MSTestExtension' Version: '3.9.0' DisplayName: 'MSTest' Description: 'MSTest Framework for Microsoft Testing Platform'
+2025-05-21T20:00:24.3976906+00:00 Microsoft.Testing.Extensions.VSTestBridge.ObjectModel.MessageLoggerAdapter WARNING Runsettings datacollectors are not supported by Microsoft.Testing.Platform and will be ignored
+2025-05-21T20:00:24.3985217+00:00 Microsoft.Testing.Extensions.VSTestBridge.ObjectModel.MessageLoggerAdapter WARNING Runsettings attribute 'TestAdaptersPaths' is not supported by Microsoft.Testing.Platform and will be ignored
+2025-05-21T20:00:24.4185179+00:00 mstest-trace INFORMATION MSTestExecutor.RunTests: Running tests from sources.
+2025-05-21T20:00:24.4214349+00:00 mstest-trace INFORMATION CollectSourceInformation value found : False 
+2025-05-21T20:00:24.4558458+00:00 mstest-trace INFORMATION MSTestDiscoverer: Found 22 tests from source C:\Users\Lenovo\Documents\3th_COURSE\04_Windows\PosTest\bin\Debug\net8.0\PosTest.dll
+2025-05-21T20:00:24.4752535+00:00 mstest-trace INFORMATION Created unit-test runner C:\Users\Lenovo\Documents\3th_COURSE\04_Windows\PosTest\bin\Debug\net8.0\PosTest.dll
+2025-05-21T20:00:24.4799605+00:00 Microsoft.Testing.Extensions.VSTestBridge.ObjectModel.MessageLoggerAdapter INFORMATION Test Parallelization enabled for C:\Users\Lenovo\Documents\3th_COURSE\04_Windows\PosTest\bin\Debug\net8.0\PosTest.dll (Workers: 14, Scope: MethodLevel)
+2025-05-21T20:00:24.4889171+00:00 mstest-trace INFORMATION Executing test getProductByCategory_ShouldReturnCorrectProducts
+2025-05-21T20:00:24.4889233+00:00 mstest-trace INFORMATION Executing test CalculateChange_ShouldReturnCorrectChange
+2025-05-21T20:00:24.4889475+00:00 mstest-trace INFORMATION Executing test UpdateProduct_ShouldUpdateFields
+2025-05-21T20:00:24.4889610+00:00 mstest-trace INFORMATION Executing test AddProduct_WithDuplicateBarcode_ShouldThrowException
+2025-05-21T20:00:24.4889730+00:00 mstest-trace INFORMATION Executing test GetByName_ShouldReturnProduct_WhenNameMatches
+2025-05-21T20:00:24.4890037+00:00 mstest-trace INFORMATION Executing test AddProduct_ShouldAddProductSuccesfully
+2025-05-21T20:00:24.4890168+00:00 mstest-trace INFORMATION Executing test ReduceQuantity_ShouldNotSubtract_WhenNotEnoughStock
+2025-05-21T20:00:24.4890702+00:00 mstest-trace INFORMATION Executing test DeleteProduct_ShouldRemoveProduct
+2025-05-21T20:00:24.4890995+00:00 mstest-trace INFORMATION Executing test ReduceQuantity_ShouldSubtractQuantity_WhenEnoughInStock
+2025-05-21T20:00:24.4891185+00:00 mstest-trace INFORMATION Executing test CalculateOrderTotal_ShouldReturnCorrectSum
+2025-05-21T20:00:24.4891314+00:00 mstest-trace INFORMATION Executing test GetByUser_ShouldReturnUser_WhenValidCredentials
+2025-05-21T20:00:24.4891607+00:00 mstest-trace INFORMATION Executing test GetAllProducts_ShouldReturnAll
+2025-05-21T20:00:24.4891735+00:00 mstest-trace INFORMATION Executing test GetByUser_ShouldReturnNull_WhenInvalidUsername
+2025-05-21T20:00:24.4891842+00:00 mstest-trace INFORMATION Executing test GetByName_ShouldReturnNull_WhenNameNotFound
+2025-05-21T20:00:24.5287830+00:00 mstest-trace INFORMATION Executed test GetByUser_ShouldReturnNull_WhenInvalidUsername
+2025-05-21T20:00:24.5290270+00:00 mstest-trace INFORMATION Executed test GetByName_ShouldReturnNull_WhenNameNotFound
+2025-05-21T20:00:24.5291287+00:00 mstest-trace INFORMATION Executed test CalculateChange_ShouldReturnCorrectChange
+2025-05-21T20:00:24.5291718+00:00 mstest-trace INFORMATION Executed test CalculateOrderTotal_ShouldReturnCorrectSum
+2025-05-21T20:00:24.5293640+00:00 mstest-trace INFORMATION Executed test DeleteProduct_ShouldRemoveProduct
+2025-05-21T20:00:24.5299807+00:00 mstest-trace INFORMATION Executed test AddProduct_ShouldAddProductSuccesfully
+2025-05-21T20:00:24.5300192+00:00 mstest-trace INFORMATION Executed test getProductByCategory_ShouldReturnCorrectProducts
+2025-05-21T20:00:24.5300437+00:00 mstest-trace INFORMATION Executed test GetAllProducts_ShouldReturnAll
+2025-05-21T20:00:24.5300622+00:00 mstest-trace INFORMATION Executed test UpdateProduct_ShouldUpdateFields
+2025-05-21T20:00:24.5301181+00:00 mstest-trace INFORMATION Executed test GetByName_ShouldReturnProduct_WhenNameMatches
+2025-05-21T20:00:24.5303026+00:00 mstest-trace INFORMATION Executed test AddProduct_WithDuplicateBarcode_ShouldThrowException
+2025-05-21T20:00:24.5303832+00:00 mstest-trace INFORMATION Executed test GetByUser_ShouldReturnUser_WhenValidCredentials
+2025-05-21T20:00:24.5333295+00:00 mstest-trace INFORMATION Executing test GetByUser_ShouldReturnNull_WhenInvalidPassword
+2025-05-21T20:00:24.5333351+00:00 mstest-trace INFORMATION Executing test AddCategory_ValidName_CallsRepoAdd
+2025-05-21T20:00:24.5333429+00:00 mstest-trace INFORMATION Executing test AddCategory_EmptyName_ThrowsException
+2025-05-21T20:00:24.5335023+00:00 mstest-trace INFORMATION Executing test GetCategories_ReturnsFromRepo
+2025-05-21T20:00:24.5335326+00:00 mstest-trace INFORMATION Executing test UpdateCategory_ValidInput_CallsRepoUpdate
+2025-05-21T20:00:24.5335623+00:00 mstest-trace INFORMATION Executing test UpdateCategory_EmptyName_ThrowsException
+2025-05-21T20:00:24.5336040+00:00 mstest-trace INFORMATION Executing test GetCategoryById_ReturnsCorrectCategory
+2025-05-21T20:00:24.5336245+00:00 mstest-trace INFORMATION Executing test DeleteCategory_ValidId_CallsRepoDelete
+2025-05-21T20:00:24.5339649+00:00 mstest-trace INFORMATION Executed test GetByUser_ShouldReturnNull_WhenInvalidPassword
+2025-05-21T20:00:24.5546503+00:00 mstest-trace INFORMATION Executed test ReduceQuantity_ShouldNotSubtract_WhenNotEnoughStock
+2025-05-21T20:00:24.5546556+00:00 mstest-trace INFORMATION Executed test ReduceQuantity_ShouldSubtractQuantity_WhenEnoughInStock
+2025-05-21T20:00:24.5547357+00:00 mstest-trace INFORMATION MSTestExecutor:Test PosTest.OrderServiceTests.ReduceQuantity_ShouldNotSubtract_WhenNotEnoughStock failed. ErrorMessage:Test method PosTest.OrderServiceTests.ReduceQuantity_ShouldNotSubtract_WhenNotEnoughStock threw exception: 
+System.NullReferenceException: Object reference not set to an instance of an object., ErrorStackTrace:   at PosTest.OrderServiceTests.ReduceQuantity_ShouldNotSubtract_WhenNotEnoughStock() in C:\Users\Lenovo\Documents\3th_COURSE\04_Windows\PosTest\OrderServiceTests.cs:line 98
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+.
+2025-05-21T20:00:24.5547506+00:00 mstest-trace INFORMATION MSTestExecutor:Test PosTest.OrderServiceTests.ReduceQuantity_ShouldSubtractQuantity_WhenEnoughInStock failed. ErrorMessage:Test method PosTest.OrderServiceTests.ReduceQuantity_ShouldSubtractQuantity_WhenEnoughInStock threw exception: 
+System.NullReferenceException: Object reference not set to an instance of an object., ErrorStackTrace:   at PosTest.OrderServiceTests.ReduceQuantity_ShouldSubtractQuantity_WhenEnoughInStock() in C:\Users\Lenovo\Documents\3th_COURSE\04_Windows\PosTest\OrderServiceTests.cs:line 85
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+.
+2025-05-21T20:00:24.5680024+00:00 mstest-trace INFORMATION Executed test AddCategory_EmptyName_ThrowsException
+2025-05-21T20:00:24.5681565+00:00 mstest-trace INFORMATION Executed test UpdateCategory_EmptyName_ThrowsException
+2025-05-21T20:00:24.5769929+00:00 mstest-trace INFORMATION Executed test DeleteCategory_ValidId_CallsRepoDelete
+2025-05-21T20:00:24.5769929+00:00 mstest-trace INFORMATION Executed test GetCategoryById_ReturnsCorrectCategory
+2025-05-21T20:00:24.5769929+00:00 mstest-trace INFORMATION Executed test GetCategories_ReturnsFromRepo
+2025-05-21T20:00:24.5834281+00:00 mstest-trace INFORMATION Executed test AddCategory_ValidName_CallsRepoAdd
+2025-05-21T20:00:24.5847299+00:00 mstest-trace INFORMATION Executed test UpdateCategory_ValidInput_CallsRepoUpdate
+2025-05-21T20:00:24.5850099+00:00 mstest-trace INFORMATION Executed tests belonging to source C:\Users\Lenovo\Documents\3th_COURSE\04_Windows\PosTest\bin\Debug\net8.0\PosTest.dll

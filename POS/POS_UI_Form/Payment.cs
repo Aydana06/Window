@@ -10,21 +10,25 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.Data.Sqlite;
+using PosLibrary.Services;
+using PosLibrary.Repo;
 
 namespace POS_UI_Form
 {
     public partial class Payment : Form
     {
-        private static string DbPath = @"C:\Users\Lenovo\Documents\3th_COURSE\04_Windows\PosLibrary\Database.db";
-        private static string ConnectionString = $"Data Source = {DbPath}";
-        public double totalPrice { get; set; }
-        private List<Order> orders;
-        public Payment(double totalAmount, List<Order> orderList)
+        public decimal _totalPrice { get; set; }
+        private List<OrderItem> _orders;
+        private readonly OrderService _service;
+        private string _connString = DatabaseConfig.ConnectionString;
+        public Payment(decimal totalAmount, List<OrderItem> orderList)
         {
             InitializeComponent();
-            totalPrice = totalAmount;
+            _totalPrice = totalAmount;
             txtTotalPrice.Text = totalAmount.ToString();
-            orders = orderList;
+            _orders = orderList;
+
+            _service = new OrderService(_connString);
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -32,39 +36,22 @@ namespace POS_UI_Form
         //Үндсэн форм руу буцаана
         private void btnBack_Click(object sender, EventArgs e)
         {
-            totalPrice = 0;
+            _totalPrice = 0;
             this.Close();
         }
 
-        public void ReduceQuantity(String productName, int amount)
-        {
-            using (var conn = new SqliteConnection(ConnectionString))
-            {
-                conn.Open();
-                string query = "UPDATE Products SET Quantity = Quantity - @amount WHERE Name= @Name AND Quantity >= @amount";
-
-                using (var cmd = new SqliteCommand(query, conn))
-                {
-                    cmd.Parameters.AddWithValue("@amount", amount);
-                    cmd.Parameters.AddWithValue("@Name", productName);
-
-                    cmd.ExecuteNonQuery();
-                }
-            }
-        }
 
         //Баталгаажуулах буюу printForm гарч ирнэ
         private void btnValidate_Click(object sender, EventArgs e)
         {
-            if (double.TryParse(txtPaid.Text, out double amountPaid)
-                && double.TryParse(txtChange.Text, out double change))
+            if (decimal.TryParse(txtPaid.Text, out decimal amountPaid))
             {
-                PrintOrder printer = new PrintOrder(orders, amountPaid, change, totalPrice);
+                PrintOrder printer = new PrintOrder(_orders, amountPaid, _totalPrice);
                 printer.printReceipt();
 
-                foreach (var order in orders)
+                foreach (var order in _orders)
                 {
-                    ReduceQuantity(order.ProductName, order.Quantity);
+                    _service.ReduceQuantity(order.ProductName, order.Quantity);
                 }
 
                 MessageBox.Show("Зарагдсан барааны мэдээлэл хадгалагдлаа.");
@@ -93,10 +80,9 @@ namespace POS_UI_Form
         //Change мөнгө тоцоолох
         private void btnConfirm_Click(object sender, EventArgs e)
         {
-            if (int.TryParse(txtTotalPrice.Text, out int amountToPay) &&
-                int.TryParse(txtPaid.Text, out int amountPaid))
+            if (decimal.TryParse(txtPaid.Text, out decimal amountPaid))
             {
-                int change = amountPaid - amountToPay;
+                decimal change = _service.CalculateChange(_totalPrice, amountPaid);
                 txtChange.Text = change >= 0 ? change.ToString("0.00") : "0.00";
             }
             else

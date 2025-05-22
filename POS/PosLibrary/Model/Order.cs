@@ -8,15 +8,19 @@ namespace PosLibrary.Model
 {
     public class Order
     {
-        //public int Id { get; set; }
-        //private List<OrderItem> items1 = new();
-
-        public int orderId { get; set; }
-        public string ProductName { get; set; }
-        public int Quantity {  get; set; }
-        public double Price { get; set; }
-        public double Total => Quantity * Price;
-        public double AmountToPay { get; set; }
-        public double Change {  get; set; }
+        public int Id { get; set; }
+        public List<OrderItem> Items { get; set; } = new();
+        public decimal TotalAmount
+        {
+            get
+            {
+                decimal totalAmount = 0;
+                foreach (var item in Items)
+                {
+                    totalAmount += item.Total;
+                }
+                return totalAmount;
+            }
+        }
     }
 }
